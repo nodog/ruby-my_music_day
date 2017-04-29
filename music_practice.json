@@ -1,0 +1,18 @@
+{
+  "title" : "music day practice",
+  "draft" : "1",
+  "draft_date" : "2017-04-29",
+  "keys" : [ "C", "G", "D", "A", "E", "B", "F#", "C#", "Ab", "Eb", "Bb", "F" ],
+  "scales" : ["major", "minor", "minor harmonic", "blues"],
+  "n_periods" : 2,
+  "instruments" : [ "keyboard", "guitar" ],
+  "activities" : [
+    "transcribe a song: chords, melody, solo - whole song across sessions",
+    "practice vocal scales across my range - instrument + voice + metronome",
+    "practice instrument scale - instrument + voice when possible + metronome",
+    "play from lead sheet - chords/melody + metronome - LH+RH techniques + transposition",
+    "practice choir music - rhythm/melody/parts + metronome",
+    "sight read pop music - rhythm/chords/melody/etc + metronome",
+    "practice performing an entire song w/o sheet, singing + LH+RH + transposition"
+  ]
+}
