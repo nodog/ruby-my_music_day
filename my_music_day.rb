@@ -25,7 +25,13 @@ for i_session in 1..n_periods do
   puts "-----------------"
   puts "session #{i_session} - #{60/n_periods} minutes"
   puts "instrument = #{practice_hash["instruments"].sample(random: prng)}"
-  puts "activity = \n  #{practice_hash["activities"].sample(random: prng)}"
+  activity = practice_hash["activities"].sample(random: prng)
+  puts "activity = \n  #{activity["activity"]}"
+  goal_numbers = activity["goals"]
+  puts "  goals to keep in mind:"
+  for i_goal in 0..goal_numbers.size - 1 do
+    puts "    - #{practice_hash["goals"][goal_numbers[i_goal].to_s]}"
+  end
 end
 
 puts "-----------------"
