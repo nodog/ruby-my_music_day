@@ -3,7 +3,7 @@
   "draft" : "1",
   "draft_date" : "2017-04-29",
   "keys" : [ "C", "G", "D", "A", "E", "B", "F#", "C#", "Ab", "Eb", "Bb", "F" ],
-  "scales" : ["major", "minor", "minor harmonic", "blues"],
+  "scales" : ["major", "minor", "blues"],
   "n_periods" : 2,
   "instruments" : [ "keyboard", "guitar" ],
   "activities" : [
