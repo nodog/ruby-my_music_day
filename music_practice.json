@@ -16,6 +16,12 @@
     { "activity" : "practice instrument scale - instrument + voice when possible + metronome",
       "goals" : [ 5, 7, 11 ]
     },
+    { "activity" : "practice chord changes - instrument + voice when possible + metronome",
+      "goals" : [ 3, 4, 5, 7, 9 ]
+    },
+    { "activity" : "practice improvisation - instrument + voice when possible + metronome",
+      "goals" : [ 3, 5, 7, 8, 9, 10, 11 ]
+    },
     { "activity" : "play from lead sheet - chords/melody + metronome - LH+RH techniques + transposition",
       "goals" : [ 1, 3, 4, 7, 9, 10, 11 ]
     },
