@@ -7,7 +7,11 @@ practice_file = File.read('music_practice.json')
 practice_hash = JSON.parse(practice_file)
 
 if ARGV[0]
-  seed = ARGV[0].to_i
+  if ARGV[0] == "tomorrow"
+    seed = Date.today.year() * 1000 + Date.today.yday() + 1
+  else
+    seed = ARGV[0].to_i
+  end
 else
   seed = Date.today.year() * 1000 + Date.today.yday()
 end
