@@ -25,9 +25,10 @@ puts "a key - #{practice_hash["keys"].sample(random: prng)}"
 puts "a scale - #{practice_hash["scales"].sample(random: prng)}"
 
 n_periods = practice_hash["n_periods"]
+period_time = practice_hash["total_time"]/n_periods
 for i_session in 1..n_periods do
   puts "-----------------"
-  puts "session #{i_session} - #{60/n_periods} minutes"
+  puts "session #{i_session} - #{period_time} minutes"
   puts "instrument = #{practice_hash["instruments"].sample(random: prng)}"
   activity = practice_hash["activities"].sample(random: prng)
   puts "activity = \n  #{activity["activity"]}"

@@ -4,6 +4,7 @@
   "draft_date" : "2017-04-29",
   "keys" : [ "C", "G", "D", "A", "E", "B", "F#", "C#", "Ab", "Eb", "Bb", "F" ],
   "scales" : ["major", "minor", "blues"],
+  "total_time" : 40,
   "n_periods" : 2,
   "instruments" : [ "keyboard", "guitar" ],
   "activities" : [
