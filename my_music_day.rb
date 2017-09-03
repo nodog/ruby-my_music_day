@@ -8,12 +8,16 @@ practice_hash = JSON.parse(practice_file)
 
 if ARGV[0]
   if ARGV[0] == "tomorrow"
-    seed = Date.today.year() * 1000 + Date.today.yday() + 1
+    tomorrow = Date.today + 1
+    seed = tomorrow.year() * 1000 + tomorrow.yday()
+    date_of = tomorrow.strftime("%F")
   else
     seed = ARGV[0].to_i
   end
 else
-  seed = Date.today.year() * 1000 + Date.today.yday()
+  this_day = Date.today
+  seed = this_day.year() * 1000 + this_day.yday()
+  date_of = this_day.strftime("%F")
 end
 
 prng = Random.new(seed)
@@ -21,6 +25,9 @@ prng = Random.new(seed)
 puts "-----------------"
 puts "#{practice_hash["title"]}"
 puts "based on seed #{seed}"
+if date_of
+  puts "for the date of #{date_of}"
+end
 puts "a key - #{practice_hash["keys"].sample(random: prng)}"
 puts "a scale - #{practice_hash["scales"].sample(random: prng)}"
 
