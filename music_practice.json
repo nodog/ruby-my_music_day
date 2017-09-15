@@ -4,6 +4,8 @@
   "draft_date" : "2017-04-29",
   "keys" : [ "C", "G", "D", "A", "E", "B", "F#", "C#", "Ab", "Eb", "Bb", "F" ],
   "scales" : ["major", "minor", "blues"],
+  "scale practice method" : ["2 octave blind", "contrary movement", "Hanon", "Hanon", "invent one", "create one"],
+  "hanon exercise max" : 6,
   "total_time" : 40,
   "n_periods" : 2,
   "instruments" : [ "keyboard", "guitar" ],
@@ -12,9 +14,11 @@
       "goals" : [ 1, 6, 10 ]
     },
     { "activity" : "practice vocal scales across my range - instrument + voice + metronome",
+      "suggest scale" : true,
       "goals" : [ 5, 7, 11 ]
     },
     { "activity" : "practice instrument scale - instrument + voice when possible + metronome",
+      "suggest scale" : true,
       "goals" : [ 5, 7, 11 ]
     },
     { "activity" : "practice chord changes - instrument + voice when possible + metronome",

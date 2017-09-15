@@ -3,11 +3,15 @@
 require 'json'
 require 'date'
 
+BIG_INTEGER = 99999999
+
 practice_file = File.read('music_practice.json')
 practice_hash = JSON.parse(practice_file)
 
 if ARGV[0]
-  if ARGV[0] == "tomorrow"
+  if ARGV[0] == "random"
+    seed = rand(BIG_INTEGER)
+  elsif ARGV[0] == "tomorrow"
     tomorrow = Date.today + 1
     seed = tomorrow.year() * 1000 + tomorrow.yday()
     date_of = tomorrow.strftime("%F")
@@ -30,7 +34,11 @@ if date_of
 end
 puts "a key - #{practice_hash["keys"].sample(random: prng)}"
 puts "a scale - #{practice_hash["scales"].sample(random: prng)}"
-
+scale_practice_method = practice_hash["scale practice method"].sample(random: prng)
+if scale_practice_method == practice_hash["scale practice method"][2]
+  scale_practice_method += " #{Random.rand(practice_hash["hanon exercise max"]) + 1}"
+end
+puts "a scale practice method - #{scale_practice_method}"
 n_periods = practice_hash["n_periods"]
 period_time = practice_hash["total_time"]/n_periods
 for i_session in 1..n_periods do
