@@ -3,7 +3,7 @@
   "draft" : "1",
   "draft_date" : "2017-04-29",
   "keys" : [ "C", "G", "D", "A", "E", "B", "F#", "C#", "Ab", "Eb", "Bb", "F" ],
-  "scales" : ["major", "minor", "blues"],
+  "scales" : ["major", "minor", "major", "minor", "major", "minor", "major", "minor", "harmonic minor", "blues"],
   "scale practice method" : ["2 octave blind", "contrary movement", "Hanon", "Hanon", "invent one", "create one"],
   "hanon exercise max" : 6,
   "total_time" : 40,
