@@ -8,7 +8,7 @@
   "hanon exercise max" : 6,
   "total_time" : 40,
   "n_periods" : 2,
-  "instruments" : [ "keyboard", "guitar" ],
+  "instruments" : [ "acoustic piano", "acoustic guitar", "electric piano", "electric guitar" ],
   "activities" : [
     { "activity" : "transcribe a song: chords, melody, solo - whole song across sessions",
       "goals" : [ 1, 6, 10 ]
