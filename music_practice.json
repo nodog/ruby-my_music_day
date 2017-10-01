@@ -5,7 +5,7 @@
   "keys" : [ "C", "G", "D", "A", "E", "B", "F#", "C#", "Ab", "Eb", "Bb", "F" ],
   "scales" : ["major", "minor", "major", "minor", "major", "minor", "major", "minor", "harmonic minor", "blues"],
   "scale practice method" : ["2 octave blind", "contrary movement", "Hanon", "Hanon", "invent one", "create one"],
-  "hanon exercise max" : 6,
+  "hanon exercise max" : 20,
   "total_time" : 40,
   "n_periods" : 2,
   "instruments" : [ "acoustic piano", "acoustic guitar", "electric piano", "electric guitar" ],
