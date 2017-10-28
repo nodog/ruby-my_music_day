@@ -26,12 +26,14 @@ end
 
 prng = Random.new(seed)
 
-puts "-----------------"
+puts '-----------------'
 puts "#{practice_hash["title"]}"
 puts "based on seed #{seed}"
 if date_of
   puts "for the date of #{date_of}"
 end
+puts '-----------------'
+puts 'session 1 - 15 min'
 puts "a key - #{practice_hash["keys"].sample(random: prng)}"
 puts "a scale - #{practice_hash["scales"].sample(random: prng)}"
 scale_practice_method = practice_hash["scale practice method"].sample(random: prng)
@@ -39,12 +41,23 @@ if scale_practice_method == practice_hash["scale practice method"][2]
   scale_practice_method += " #{Random.rand(practice_hash["hanon exercise max"]) + 1}"
 end
 puts "a scale practice method - #{scale_practice_method}"
-puts "arpeggios of root chord -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
+puts "3 octave all inversion arpeggios of root chord -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
+
+songs = practice_hash["songs"].shuffle(random:prng)
+for i_song in 0..1
+  key_order = ["day key", "common key"].shuffle(random:prng).join(', then ')
+  puts '-----------------'
+  puts "session #{i_song + 2} - 15 min"
+  puts "song 1 - #{songs[i_song]}"
+  puts "  key order is #{key_order}"
+  puts '  mid-song break to apreggiate all chords all inversions 3 octaves'
+end
+
 n_periods = practice_hash["n_periods"]
 period_time = practice_hash["total_time"]/n_periods
 for i_session in 1..n_periods do
-  puts "-----------------"
-  puts "session #{i_session} - #{period_time} minutes"
+  puts '-----------------'
+  puts "session #{i_session + 3} - #{period_time} min"
   puts "instrument = #{practice_hash["instruments"].sample(random: prng)}"
   activity = practice_hash["activities"].sample(random: prng)
   puts "activity = \n  #{activity["activity"]}"
