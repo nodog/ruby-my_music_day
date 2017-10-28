@@ -50,6 +50,7 @@ for i_song in 0..1
   puts "session #{i_song + 2} - 15 min"
   puts "song 1 - #{songs[i_song]}"
   puts "  key order is #{key_order}"
+  puts "  focus on #{practice_hash['chord_styles'].sample(random: prng)} style chords"
   puts '  mid-song break to apreggiate all chords all inversions 3 octaves'
 end
 
