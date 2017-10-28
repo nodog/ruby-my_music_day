@@ -39,6 +39,7 @@ if scale_practice_method == practice_hash["scale practice method"][2]
   scale_practice_method += " #{Random.rand(practice_hash["hanon exercise max"]) + 1}"
 end
 puts "a scale practice method - #{scale_practice_method}"
+puts "arpeggios of root chord -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
 n_periods = practice_hash["n_periods"]
 period_time = practice_hash["total_time"]/n_periods
 for i_session in 1..n_periods do
