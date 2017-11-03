@@ -42,8 +42,11 @@ if scale_practice_method == practice_hash["scale practice method"][2]
 end
 puts "a scale practice method - #{scale_practice_method}"
 puts "3 octave all inversion arpeggios of root chord -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
+puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
+puts "  connection style - #{practice_hash["connection_styles"].sample(random: prng)}"
 
 songs = practice_hash["songs"].shuffle(random:prng)
+record_choice = prng.rand(8)
 for i_song in 0..1
   key_order = ["day key", "common key"].shuffle(random:prng).join(', then ')
   puts '-----------------'
@@ -51,6 +54,9 @@ for i_song in 0..1
   puts "song 1 - #{songs[i_song]}"
   puts "  key order is #{key_order}"
   puts "  focus on #{practice_hash['chord_styles'].sample(random: prng)} style chords"
+  if record_choice == i_song
+    puts '  RECORD AND LISTEN TO THIS!'
+  end
   puts '  mid-song break to apreggiate all chords all inversions 3 octaves'
 end
 
