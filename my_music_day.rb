@@ -69,4 +69,11 @@ for i_session in 1..n_periods do
   end
 end
 
-puts "-----------------"
+puts '-----------------'
+
+puts 'AFK activities'
+practice_hash['afk_activities'].each do |activity|
+  puts "  - #{activity}"
+end
+
+puts '-----------------'
