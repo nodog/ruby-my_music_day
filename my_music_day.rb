@@ -43,6 +43,7 @@ end
 puts "a scale practice method - #{scale_practice_method}"
 puts "3 octave all inversion arpeggios of root chord -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
 puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
+puts "  arpeggio start - #{practice_hash["arp_start"].sample(random: prng)}"
 puts "  connection style - #{practice_hash["connection_styles"].sample(random: prng)}"
 
 songs = practice_hash["songs"].shuffle(random:prng)
