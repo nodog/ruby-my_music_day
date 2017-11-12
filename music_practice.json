@@ -16,7 +16,7 @@
   "total_time" : 15,
   "n_periods" : 1,
   "instruments" : [ "acoustic piano", "acoustic guitar", "electric piano", "electric guitar" ],
-  "afk_activities" : [ "rhythm app", "note reading app", "note-taking from book", "summarizing piano lesson"],
+  "afk_activities" : [ "rhythm app", "note reading app", "note-taking from book", "summarizing piano lesson", "rhythm clapping", "transcribe Autumn Leaves"],
   "activities" : [
     { "activity" : "transcribe a song: chords, melody, solo - whole song across sessions",
       "goals" : [ 1, 6, 10 ]
@@ -42,6 +42,9 @@
       "goals" : [ 1, 2, 5, 7, 10, 11 ]
     },
     { "activity" : "sight read pop music - rhythm/chords/melody/etc + metronome",
+      "goals" : [ 1, 3, 5, 7, 10, 11 ]
+    },
+    { "activity" : "sight read choir music - rhythm/chords/melody/etc + metronome",
       "goals" : [ 1, 3, 5, 7, 10, 11 ]
     },
     { "activity" : "point and sing - melody line (improvised or written)",
