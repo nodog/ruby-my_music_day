@@ -54,10 +54,12 @@ for i_song in 0..1
   key_order = ["day key", "common key"].shuffle(random:prng).join(', then ')
   puts '-----------------'
   puts "session #{i_song + 2} - 15 min"
-  puts "song 1 - #{songs[i_song]}"
+  song = songs[i_song]
+  puts "song - #{song['name']}"
   #puts "  key order is #{key_order}"
-  #puts "  focus on #{practice_hash['chord_styles'].sample(random: prng)} style chords"
-  puts "  focus on #{practice_hash['chord_styles'][0]} style chords"
+  puts "  focus on #{practice_hash['chord_styles'].sample(random: prng)} style chords"
+  puts "  using the #{song['inversions'].sample(random: prng)} inversion."
+  #puts "  focus on #{practice_hash['chord_styles'][0]} style chords"
   if record_choice == i_song
     puts '  RECORD AND LISTEN TO THIS!'
   end
@@ -91,7 +93,7 @@ end
 puts '-----------------'
 
 puts 'AFK activities'
-practice_hash['afk_activities'].each do |activity|
+practice_hash['afk_activities'].shuffle(random: prng).each do |activity|
   puts "  - #{activity}"
 end
 
