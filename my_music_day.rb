@@ -41,6 +41,7 @@ if scale_practice_method == practice_hash["scale practice method"][2]
   scale_practice_method += " #{Random.rand(practice_hash["hanon exercise max"]) + 1}"
 end
 puts "a scale practice method - #{scale_practice_method}"
+puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
 puts "3 octave all inversion arpeggios of root chord -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
 puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
 puts "  arpeggio start - #{practice_hash["arp_start"].sample(random: prng)}"

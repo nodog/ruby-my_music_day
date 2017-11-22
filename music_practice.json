@@ -2,6 +2,7 @@
   "title" : "music day practice",
   "draft" : "1",
   "draft_date" : "2017-04-29",
+  "all_notes" : [ "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", "A", "A#/Bb", "B"],
   "keys" : [ "C", "G", "D", "A", "E", "B", "F#", "C#", "Ab", "Eb", "Bb", "F" ],
   "scales" : ["major", "minor", "harmonic minor", "blues", "melodic minor"],
   "chords" : ["6", "-6", "-7", "-7b5", "7", "°7", "◬7"],
