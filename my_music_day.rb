@@ -43,7 +43,7 @@ end
 puts "a scale practice method - #{scale_practice_method}"
 puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
 puts "3 octave all inversion arpeggios of root chord -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
-puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
+#puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
 puts "  arpeggio start - #{practice_hash["arp_start"].sample(random: prng)}"
 puts "  inversion start - #{practice_hash["inversion_start"].sample(random: prng)}"
 puts "  connection style - #{practice_hash["connection_styles"].sample(random: prng)}"
@@ -58,16 +58,19 @@ for i_song in 0..1
   song = songs[i_song]
   puts "song - #{song['name']}"
   #puts "  key order is #{key_order}"
-  puts "  focus on #{practice_hash['chord_styles'].sample(random: prng)} style chords"
-  puts "  using the #{song['inversions'].sample(random: prng)} inversion."
+  puts "  focus on #{practice_hash['chord_styles'].sample(random: prng)} playing style"
+  puts "  using a #{practice_hash['rhythms'].sample(random: prng)} rhythm"
+  puts "  and the #{song['inversions'].sample(random: prng)} inversion."
+  puts "  special technique - #{song['special_techniques'].sample(random: prng)}"
   #puts "  focus on #{practice_hash['chord_styles'][0]} style chords"
   if record_choice == i_song
     puts '  RECORD AND LISTEN TO THIS!'
   end
+  puts '  play through, focus on changes, play through'
   puts '  mid-song break to apreggiate all chords all inversions 3 octaves'
   if i_song == exercises[0]
     puts '-----------------'
-    puts 'Try exercise #2 - ii V I - circle - root + 7 or 3'
+    puts 'Try exercise #2 - ii V I - circle - LH root + 7 or 3 + RH 1 chord tone'
   elsif i_song == exercises[1]
     puts '-----------------'
     puts 'Try exercise #1 - rhythm clapping'
