@@ -25,7 +25,7 @@
               "inversions" : [ "1st", "3rd"],
               "special_techniques" : ["none"]}],
   "chord_styles_all" : ["close voicing + melody", "close voicing + melody", "close voicing + melody", "close voicing + melody", "rootless + melody", "root + 3+7+flavor", "shell", "drop 2", "drop 3", "drop 4"],
-  "chord_styles" : ["close voicing + melody", "root + melody", "LH:root + RH:3+7 voice leading", "improvising over recorded chords in a structure"],
+  "chord_styles" : ["close voicing + melody", "root + melody", "LH:root + RH:3+7 voice leading", "improvising over recorded chords in a structure", "improv over root notes", "very simple improv over close voicing" ],
   "rhythms" : ["whole note", "1/8th note on the 1", "Charleston"],
   "total_time" : 15,
   "n_periods" : 1,
