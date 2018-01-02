@@ -58,9 +58,9 @@ for i_song in 0..1
   song = songs[i_song]
   puts "song - #{song['name']}"
   #puts "  key order is #{key_order}"
-  puts "  focus on #{practice_hash['chord_styles'].sample(random: prng)} playing style"
-  puts "  using a #{practice_hash['rhythms'].sample(random: prng)} rhythm"
-  puts "  and the #{song['inversions'].sample(random: prng)} inversion."
+  #puts "  focus on #{practice_hash['chord_styles'].sample(random: prng)} playing style"
+  #puts "  using a #{practice_hash['rhythms'].sample(random: prng)} rhythm"
+  #puts "  and the #{song['inversions'].sample(random: prng)} inversion."
   puts "  special technique - #{song['special_techniques'].sample(random: prng)}"
   #puts "  focus on #{practice_hash['chord_styles'][0]} style chords"
   if record_choice == i_song
