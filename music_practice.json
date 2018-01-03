@@ -20,7 +20,7 @@
               "inversions" : [ "1st", "2nd"]}],
   "songs" : [{"name" : "Blue Monk",
               "inversions" : [ "root", "1st"],
-              "special_techniques" : ["coupled 3rds in melody or found improv lick"]},
+              "special_techniques" : ["coupled 3rds in melody", "found improv lick"]},
              {"name" : "Take the A Train",
               "inversions" : [ "1st", "3rd"],
               "special_techniques" : ["LH rootless voicing + RH melody over recorded bass"]}],
