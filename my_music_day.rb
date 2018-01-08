@@ -60,8 +60,8 @@ for i_song in 0..1
   #puts "  key order is #{key_order}"
   #puts "  focus on #{practice_hash['chord_styles'].sample(random: prng)} playing style"
   #puts "  using a #{practice_hash['rhythms'].sample(random: prng)} rhythm"
-  #puts "  and the #{song['inversions'].sample(random: prng)} inversion."
   puts "  special technique - #{song['special_techniques'].sample(random: prng)}"
+  puts "  use the #{song['inversions'].sample(random: prng)} inversion, if appropriate."
   #puts "  focus on #{practice_hash['chord_styles'][0]} style chords"
   if record_choice == i_song
     puts '  RECORD AND LISTEN TO THIS!'
