@@ -70,7 +70,7 @@ for i_song in 0..1
   puts '  mid-song break to arpeggiate 2 chords all inversions 3 octaves'
   if i_song == exercises[0]
     puts '-----------------'
-    puts 'Try exercise #2 - ii V I - circle - LH root + 7 or 3 + RH 1 chord tone'
+    puts 'Try exercise #2 - ii V I - circle - LH root + 7 or 3 + improv remembering chord tones'
   elsif i_song == exercises[1]
     puts '-----------------'
     puts 'Try exercise #1 - rhythm clapping'
