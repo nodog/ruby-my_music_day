@@ -45,6 +45,7 @@ puts "start point - #{practice_hash["arp_start"].sample(random: prng)}"
 puts "metronome style - #{practice_hash["metronome_styles"].sample(random: prng)}"
 puts "3 octave all inversion arpeggios of root chord -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
 #puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
+puts "  arpeggio components - #{practice_hash["arp_components"].sample(random: prng)}"
 puts "  inversion start - #{practice_hash["inversion_start"].sample(random: prng)}"
 puts "  connection style - #{practice_hash["connection_styles"].sample(random: prng)}"
 puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
@@ -61,7 +62,11 @@ for i_song in 0..1
   #puts "  key order is #{key_order}"
   #puts "  focus on #{practice_hash['chord_styles'].sample(random: prng)} playing style"
   #puts "  using a #{practice_hash['rhythms'].sample(random: prng)} rhythm"
-  puts "  special technique - #{song['special_techniques'].sample(random: prng)}"
+  if song.key?('this_week')
+    puts "  week's technique - #{song['special_techniques'][song['this_week']]}"
+  else
+    puts "  special technique - #{song['special_techniques'].sample(random: prng)}"
+  end
   puts "  use the #{song['inversions'].sample(random: prng)} inversion, if appropriate."
   #puts "  focus on #{practice_hash['chord_styles'][0]} style chords"
   if record_choice == i_song
