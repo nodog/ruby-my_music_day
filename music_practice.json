@@ -23,6 +23,7 @@
   "scale practice method" : ["3 octave blind", "contrary movement", "Hanon", "create one"],
   "hanon exercise max" : 20,
   "metronome_styles" : ["quarter", "swing eighth", "beats 2 & 4", "3/4", "beat 1 only", "4on/4off"],
+  "backing_sources" : ["irealpro", "metronome"],
   "songs_all" : [{"name" : "Blue Monk",
               "inversions" : [ "root", "1st"]},
              {"name" : "Take the A Train",

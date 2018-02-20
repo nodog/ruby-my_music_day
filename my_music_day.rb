@@ -43,6 +43,7 @@ end
 puts "a scale practice method - #{scale_practice_method}"
 puts "start point - #{practice_hash["arp_start"].sample(random: prng)}"
 puts "metronome style - #{practice_hash["metronome_styles"].sample(random: prng)}"
+puts "backing source - #{practice_hash['backing_sources'].sample(random: prng)}"
 puts "3 octave all inversion arpeggios of root chord -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
 #puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
 puts "  arpeggio components - #{practice_hash["arp_components"].sample(random: prng)}"
