@@ -50,6 +50,13 @@ puts "  arpeggio components - #{practice_hash["arp_components"].sample(random: p
 puts "  inversion start - #{practice_hash["inversion_start"].sample(random: prng)}"
 puts "  connection style - #{practice_hash["connection_styles"].sample(random: prng)}"
 puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
+comp_rhythm = ['- ', '. ', '- ', '. ', '- ', '. ', '- ', '. ']
+# assure at least 1 8th is on
+comp_rhythm[1 + 2 * prng.rand(4)] = 'O ' 
+prng.rand(4).times do
+  comp_rhythm[prng.rand(8)] =  'O '
+end
+puts "comping rhythm -   |:  #{comp_rhythm.join} :|"
 
 songs = practice_hash["songs"].shuffle(random:prng)
 exercises = [0,1].shuffle(random:prng)
