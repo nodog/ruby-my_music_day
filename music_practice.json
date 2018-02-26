@@ -56,7 +56,7 @@
   "total_time" : 15,
   "n_periods" : 1,
   "instruments" : [ "acoustic piano", "acoustic guitar", "electric piano", "electric guitar" ],
-  "afk_activities" : [ "rhythm app", "note reading app", "note-taking from practice book", "summarizing piano lesson", "rhythm clapping"],
+  "afk_activities" : [ "rhythm app", "note reading app", "summarizing piano lesson", "rhythm clapping", "ear training", "note-taking from practice book"],
   "activities" : [
     { "activity" : "transcribe a song: chords, melody, solo - whole song across sessions",
       "goals" : [ 1, 6, 10 ]
