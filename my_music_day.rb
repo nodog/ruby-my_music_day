@@ -110,9 +110,9 @@ end
 
 puts '-----------------'
 
-puts 'AFK activities'
-practice_hash['afk_activities'].shuffle(random: prng).each do |activity|
-  puts "  - #{activity}"
-end
+# puts 'AFK activities'
+# practice_hash['afk_activities'].shuffle(random: prng).each do |activity|
+#  puts "  - #{activity}"
+# end
 
-puts '-----------------'
+# puts '-----------------'
