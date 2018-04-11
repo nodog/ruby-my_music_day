@@ -45,7 +45,7 @@ puts "start point - #{practice_hash["arp_start"].sample(random: prng)}"
 puts "metronome style - #{practice_hash["metronome_styles"].sample(random: prng)}"
 puts "backing source - #{practice_hash['backing_sources'].sample(random: prng)}"
 puts "3 octave all inversion arpeggios of root chord -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
-#puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
+puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
 puts "  arpeggio components - #{practice_hash["arp_components"].sample(random: prng)}"
 puts "  inversion start - #{practice_hash["inversion_start"].sample(random: prng)}"
 puts "  connection style - #{practice_hash["connection_styles"].sample(random: prng)}"
@@ -59,7 +59,7 @@ end
 puts "comping rhythm -   |:  #{comp_rhythm.join} :|"
 
 songs = practice_hash["songs"].shuffle(random:prng)
-exercises = [0,1].shuffle(random:prng)
+intersong_exercises = practice_hash["intersong_exercises"].shuffle(random:prng)
 record_choice = prng.rand(8)
 for i_song in 0..1
   key_order = ["day key", "common key"].shuffle(random:prng).join(', then ')
@@ -82,13 +82,8 @@ for i_song in 0..1
   end
   puts '  play through, focus on changes, play through'
   puts '  mid-song break to arpeggiate 2 chords all inversions 3 octaves'
-  if i_song == exercises[0]
-    puts '-----------------'
-    puts 'Try exercise #2 - ii V I - circle - LH root + 7 or 3 + improv remembering chord tones'
-  elsif i_song == exercises[1]
-    puts '-----------------'
-    puts 'Try exercise #1 - rhythm clapping'
-  end
+  puts '-----------------'
+  puts intersong_exercises[i_song]
 end
 
 n_periods = practice_hash["n_periods"]
