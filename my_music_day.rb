@@ -61,7 +61,7 @@ puts "comping rhythm -   |:  #{comp_rhythm.join} :|"
 songs = practice_hash["songs"].shuffle(random:prng)
 intersong_exercises = practice_hash["intersong_exercises"].shuffle(random:prng)
 record_choice = prng.rand(8)
-for i_song in 0..1
+for i_song in 0..2
   #key_order = ["day key", "common key"].shuffle(random:prng).join(', then ')
   puts '-----------------'
   puts "session #{i_song + 2} - 15 min"
@@ -75,35 +75,35 @@ for i_song in 0..1
   else
     puts "  special technique - #{song['special_techniques'].sample(random: prng)}"
   end
-  puts "  use the #{song['inversions'].sample(random: prng)} inversion, if appropriate."
+  #puts "  use the #{song['inversions'].sample(random: prng)} inversion, if appropriate."
   #puts "  focus on #{practice_hash['chord_styles'][0]} style chords"
   if record_choice == i_song
     puts '  RECORD AND LISTEN TO THIS!'
   end
   puts '  play through, focus on changes, play through'
   puts '  mid-song break to arpeggiate 2 chords all inversions 3 octaves'
-  puts '-----------------'
-  puts intersong_exercises[i_song]
+  #puts '-----------------'
+  #puts intersong_exercises[i_song]
 end
 
-n_periods = practice_hash["n_periods"]
-period_time = practice_hash["total_time"]/n_periods
-for i_session in 1..n_periods do
-  puts '-----------------'
-  puts "session #{i_session + 3} - #{period_time} min"
-  puts "instrument = #{practice_hash["instruments"].sample(random: prng)}"
-  #activity = practice_hash["activities"].sample(random: prng)
-  # temporarily choose sight readig always
-  activity = practice_hash["activities"][7]
-  puts "activity = \n  #{activity["activity"]}"
-  goal_numbers = activity["goals"]
-  puts "  goals to keep in mind:"
-  for i_goal in 0..goal_numbers.size - 1 do
-    puts "    - #{practice_hash["goals"][goal_numbers[i_goal].to_s]}"
-  end
-end
+# n_periods = practice_hash["n_periods"]
+# period_time = practice_hash["total_time"]/n_periods
+# for i_session in 1..n_periods do
+#   puts '-----------------'
+#   puts "session #{i_session + 3} - #{period_time} min"
+#   puts "instrument = #{practice_hash["instruments"].sample(random: prng)}"
+#   #activity = practice_hash["activities"].sample(random: prng)
+#   # temporarily choose sight readig always
+#   activity = practice_hash["activities"][7]
+#   puts "activity = \n  #{activity["activity"]}"
+#   goal_numbers = activity["goals"]
+#   puts "  goals to keep in mind:"
+#   for i_goal in 0..goal_numbers.size - 1 do
+#     puts "    - #{practice_hash["goals"][goal_numbers[i_goal].to_s]}"
+#   end
+# end
 
-puts '-----------------'
+# puts '-----------------'
 
 # puts 'AFK activities'
 # practice_hash['afk_activities'].shuffle(random: prng).each do |activity|
