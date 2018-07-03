@@ -32,41 +32,46 @@ puts "based on seed #{seed}"
 if date_of
   puts "for the date of #{date_of}"
 end
-puts '-----------------'
-puts 'session 1 - 15 min'
-puts "a key - #{practice_hash["keys"].sample(random: prng)}"
-puts "a scale - #{practice_hash["scales"].sample(random: prng)}"
+puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
+puts "\n-----------------"
+puts 'session 1 - 18 min'
+puts "  a key - #{practice_hash["keys"].sample(random: prng)}"
+puts "  metronome style - #{practice_hash["metronome_styles"].sample(random: prng)}"
+puts "  start point - #{practice_hash["arp_start"].sample(random: prng)}"
+puts "  connection style - #{practice_hash["connection_styles"][2]}"
+
+puts "\n--- session 1a - 6 min --- scale practice"
+puts "  a scale - #{practice_hash["scales"].sample(random: prng)}"
 scale_practice_method = practice_hash["scale practice method"].sample(random: prng)
 if scale_practice_method == practice_hash["scale practice method"][2]
   scale_practice_method += " #{Random.rand(practice_hash["hanon exercise max"]) + 1}"
 end
-puts "a scale practice method - #{scale_practice_method}"
-puts "start point - #{practice_hash["arp_start"].sample(random: prng)}"
-puts "metronome style - #{practice_hash["metronome_styles"].sample(random: prng)}"
-puts "backing source - #{practice_hash['backing_sources'].sample(random: prng)}"
-puts "3 octave all inversion arpeggios with singing -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
+puts "  a scale practice method - #{scale_practice_method}"
+#puts "backing source - #{practice_hash['backing_sources'].sample(random: prng)}"
+
+puts "\n--- session 1b - 6 min --- 2 octave arpeggio practice"
+puts "  chord order -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
 puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
 puts "  arpeggio components - #{practice_hash["arp_components"].sample(random: prng)}"
 puts "  inversion start - #{practice_hash["inversion_start"].sample(random: prng)}"
-puts "  connection style - #{practice_hash["connection_styles"].sample(random: prng)}"
-puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
+
+puts "\n--- session 1c - 6 min --- ii-V-I practice, LH chord, RH *simple* improv"
 comp_rhythm = ['- ', '. ', '- ', '. ', '- ', '. ', '- ', '. ']
 # assure at least 1 8th is on
 comp_rhythm[1 + 2 * prng.rand(4)] = 'O ' 
 prng.rand(4).times do
   comp_rhythm[prng.rand(8)] =  'O '
 end
-puts "comping rhythm -   |:  #{comp_rhythm.join} :|"
+puts "  comping rhythm -   |:  #{comp_rhythm.join} :|"
 
 songs = practice_hash["songs"].shuffle(random:prng)
 intersong_exercises = practice_hash["intersong_exercises"].shuffle(random:prng)
 record_choice = prng.rand(8)
-for i_song in 0..2
+for i_song in 0..1
   #key_order = ["day key", "common key"].shuffle(random:prng).join(', then ')
-  puts '-----------------'
-  puts "session #{i_song + 2} - 15 min"
+  puts "\n-----------------"
   song = songs[i_song]
-  puts "song - #{song['name']}"
+  puts "session #{i_song + 2} - 15 min --- #{song['name']}"
   #puts "  key order is #{key_order}"
   #puts "  focus on #{practice_hash['chord_styles'].sample(random: prng)} playing style"
   #puts "  using a #{practice_hash['rhythms'].sample(random: prng)} rhythm"
@@ -80,8 +85,8 @@ for i_song in 0..2
   if record_choice == i_song
     puts '  RECORD AND LISTEN TO THIS!'
   end
-  puts '  play through, focus on changes, play through'
-  puts '  mid-song break to arpeggiate 2 chords all inversions 3 octaves'
+  #puts '  play through, focus on changes, play through'
+  #puts '  mid-song break to arpeggiate 2 chords all inversions 3 octaves'
   #puts '-----------------'
   #puts intersong_exercises[i_song]
 end
