@@ -76,7 +76,7 @@ for i_song in 0..1
   #puts "  focus on #{practice_hash['chord_styles'].sample(random: prng)} playing style"
   #puts "  using a #{practice_hash['rhythms'].sample(random: prng)} rhythm"
   if song.key?('this_week')
-    puts "  week's technique - #{song['special_techniques'][song['this_week']]}"
+    puts "  technique - #{song['special_techniques'][song['this_week']]}"
   else
     puts "  special technique - #{song['special_techniques'].sample(random: prng)}"
   end
