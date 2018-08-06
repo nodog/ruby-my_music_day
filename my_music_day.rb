@@ -34,13 +34,16 @@ if date_of
 end
 puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
 puts "\n-----------------"
-puts 'session 1 - 18 min'
+puts 'session 1 - 16 min'
 puts "  a key - #{practice_hash["keys"].sample(random: prng)}"
+puts "  inversion - #{practice_hash["inversion_start"].sample(random: prng)}"
+puts "  arpeggio components - #{practice_hash["arp_components"].sample(random: prng)}"
 puts "  metronome style - #{practice_hash["metronome_styles"].sample(random: prng)}"
 puts "  start point - #{practice_hash["arp_start"].sample(random: prng)}"
 puts "  connection style - #{practice_hash["connection_styles"][2]}"
+puts "  clean firm touch"
 
-puts "\n--- session 1a - 6 min --- scale practice"
+puts "\n--- session 1a - 4 min --- scale practice"
 puts "  a scale - #{practice_hash["scales"].sample(random: prng)}"
 scale_practice_method = practice_hash["scale practice method"].sample(random: prng)
 if scale_practice_method == practice_hash["scale practice method"][2]
@@ -49,20 +52,30 @@ end
 puts "  a scale practice method - #{scale_practice_method}"
 #puts "backing source - #{practice_hash['backing_sources'].sample(random: prng)}"
 
-puts "\n--- session 1b - 6 min --- 2 octave arpeggio practice"
+puts "\n--- session 1b - 4 min --- 2 octave arpeggio practice"
 puts "  chord order -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
 puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
-puts "  arpeggio components - #{practice_hash["arp_components"].sample(random: prng)}"
-puts "  inversion start - #{practice_hash["inversion_start"].sample(random: prng)}"
 
-puts "\n--- session 1c - 6 min --- ii-V-I practice, LH chord, RH *simple* improv"
+puts "\n--- session 1c - 4 min --- ii-V-I practice"
 comp_rhythm = ['- ', '. ', '- ', '. ', '- ', '. ', '- ', '. ']
+comp_rhythm_1 = comp_rhythm.dup
+comp_rhythm_2 = comp_rhythm.dup
 # assure at least 1 8th is on
-comp_rhythm[1 + 2 * prng.rand(4)] = 'O ' 
+comp_rhythm_1 [1 + 2 * prng.rand(4)] = 'O ' 
+comp_rhythm_2 [1 + 2 * prng.rand(4)] = 'O ' 
 prng.rand(4).times do
-  comp_rhythm[prng.rand(8)] =  'O '
+  comp_rhythm_1[prng.rand(8)] =  'O '
 end
-puts "  comping rhythm -   |:  #{comp_rhythm.join} :|"
+prng.rand(4).times do
+  comp_rhythm_2[prng.rand(8)] =  'O '
+end
+puts "  both hands, drop voicing (use: LH 3+7 RH 1+5 (or 9+13)), separate rhythms"
+puts "  comping rhythm 1 -   |:  #{comp_rhythm_1.join} :|"
+puts "  comping rhythm 2 -   |:  #{comp_rhythm_2.join} :|"
+
+puts "\n--- session 1d - 4 min --- quartal chords"
+puts "  In multiple octaves, find root quartal chords."
+  # later add planing
 
 songs = practice_hash["songs"].shuffle(random:prng)
 intersong_exercises = practice_hash["intersong_exercises"].shuffle(random:prng)
