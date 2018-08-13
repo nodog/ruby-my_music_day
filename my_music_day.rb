@@ -34,7 +34,7 @@ if date_of
 end
 puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
 puts "\n-----------------"
-puts 'session 1 - 16 min'
+puts 'session 1 - 17 min'
 puts "  a key - #{practice_hash["keys"].sample(random: prng)}"
 puts "  inversion - #{practice_hash["inversion_start"].sample(random: prng)}"
 puts "  arpeggio components - #{practice_hash["arp_components"].sample(random: prng)}"
@@ -43,7 +43,7 @@ puts "  start point - #{practice_hash["arp_start"].sample(random: prng)}"
 puts "  connection style - #{practice_hash["connection_styles"][2]}"
 puts "  clean firm touch"
 
-puts "\n--- session 1a - 4 min --- scale practice"
+puts "\n--- session 1a - 5 min --- scale practice"
 puts "  a scale - #{practice_hash["scales"].sample(random: prng)}"
 scale_practice_method = practice_hash["scale practice method"].sample(random: prng)
 if scale_practice_method == practice_hash["scale practice method"][2]
@@ -52,11 +52,11 @@ end
 puts "  a scale practice method - #{scale_practice_method}"
 #puts "backing source - #{practice_hash['backing_sources'].sample(random: prng)}"
 
-puts "\n--- session 1b - 4 min --- 2 octave arpeggio practice"
+puts "\n--- session 1b - 5 min --- 2 octave arpeggio practice"
 puts "  chord order -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
 puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
 
-puts "\n--- session 1c - 4 min --- ii-V-I practice"
+puts "\n--- session 1c - 5 min --- ii-V-I practice"
 comp_rhythm = ['- ', '. ', '- ', '. ', '- ', '. ', '- ', '. ']
 comp_rhythm_1 = comp_rhythm.dup
 comp_rhythm_2 = comp_rhythm.dup
@@ -73,7 +73,7 @@ puts "  both hands, drop voicing (use: LH 3+7 RH 1+5 (or 9+13)), separate rhythm
 puts "  comping rhythm 1 -   |:  #{comp_rhythm_1.join} :|"
 puts "  comping rhythm 2 -   |:  #{comp_rhythm_2.join} :|"
 
-puts "\n--- session 1d - 4 min --- quartal chords"
+puts "\n--- session 1d - 2 min --- quartal chords"
 puts "  In multiple octaves, find root quartal chords."
   # later add planing
 
