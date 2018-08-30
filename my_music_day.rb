@@ -27,21 +27,20 @@ end
 prng = Random.new(seed)
 
 puts '-----------------'
-puts "#{practice_hash["title"]}"
-puts "based on seed #{seed}"
+print "#{practice_hash["title"]}"
 if date_of
-  puts "for the date of #{date_of}"
+  print " for the date of #{date_of}"
 end
+puts " based on seed #{seed}"
 puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
 puts "\n-----------------"
 puts 'session 1 - 17 min'
-puts "  a key - #{practice_hash["keys"].sample(random: prng)}"
-puts "  inversion - #{practice_hash["inversion_start"].sample(random: prng)}"
-puts "  arpeggio components - #{practice_hash["arp_components"].sample(random: prng)}"
-puts "  metronome style - #{practice_hash["metronome_styles"].sample(random: prng)}"
-puts "  start point - #{practice_hash["arp_start"].sample(random: prng)}"
-puts "  connection style - #{practice_hash["connection_styles"][2]}"
-puts "  clean firm touch"
+print "  key - #{practice_hash["keys"].sample(random: prng)}"
+puts "   metronome style - #{practice_hash["metronome_styles"].sample(random: prng)}"
+print "  arpeggio components - #{practice_hash["arp_components"].sample(random: prng)}"
+print ", #{practice_hash["inversion_start"].sample(random: prng)}"
+puts ", #{practice_hash["arp_start"].sample(random: prng)} start"
+puts "  connection style - #{practice_hash["connection_styles"][2]} with clean firm touch"
 
 puts "\n--- session 1a - 5 min --- scale practice"
 puts "  a scale - #{practice_hash["scales"].sample(random: prng)}"
@@ -73,9 +72,12 @@ puts "  both hands, drop voicing (use: LH 3+7 RH 1+5 (or 9+13)), separate rhythm
 puts "  comping rhythm 1 -   |:  #{comp_rhythm_1.join} :|"
 puts "  comping rhythm 2 -   |:  #{comp_rhythm_2.join} :|"
 
-puts "\n--- session 1d - 2 min --- quartal chords"
-puts "  In multiple octaves, find root quartal chords."
+puts "\n--- session 1d - 1 min --- quartal chords"
+puts "  In multiple octaves, find root quartal chords in key."
   # later add planing
+
+puts "\n--- session 1e - 1 min --- rushing/dragging practice"
+puts "  On key practice on beat, then dragging one note to metronome."
 
 songs = practice_hash["songs"].shuffle(random:prng)
 intersong_exercises = practice_hash["intersong_exercises"].shuffle(random:prng)
