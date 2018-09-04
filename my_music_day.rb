@@ -73,11 +73,14 @@ puts "  comping rhythm 1 -   |:  #{comp_rhythm_1.join} :|"
 puts "  comping rhythm 2 -   |:  #{comp_rhythm_2.join} :|"
 
 puts "\n--- session 1d - 1 min --- quartal chords"
-puts "  In multiple octaves, find root quartal chords in key."
+puts "  In multiple octaves, find root minor key quartal voicings."
   # later add planing
 
 puts "\n--- session 1e - 1 min --- rushing/dragging practice"
 puts "  On key practice on beat, then dragging one note to metronome."
+
+puts "\n--- session 1f - 10 min --- transcribing practice"
+puts "  Write out the actual notes that you're playing in Summertime."
 
 songs = practice_hash["songs"].shuffle(random:prng)
 intersong_exercises = practice_hash["intersong_exercises"].shuffle(random:prng)
