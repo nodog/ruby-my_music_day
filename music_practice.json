@@ -20,6 +20,8 @@
               "harmonic minor - 1.0  0.5  1.0  1.0  0.5  1.5  0.5",
               "melodic minor - 1.0  0.5  1.0  1.0  1.0  1.0  0.5",
               "blues - 1.5  1.0  0.5  0.5  1.5 1.0",
+              "dorian: 2 of key - 1.0  0.5  1.0  1.0  1.0  0.5  1.0 (played over m)", 
+              "mixolydian: 5 of key - 1.0  1.0  0.5  1.0  1.0  0.5  1.0 (played over 7)",
               "chromatic - sing while playing root only"
               ],
   "chords" : ["6", "-6", "-7", "-7b5", "7", "°7", "◬7"],
