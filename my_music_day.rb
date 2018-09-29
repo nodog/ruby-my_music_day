@@ -81,7 +81,7 @@ puts "\n--- session 1e - 1 min --- rushing/dragging practice"
 puts "  On key practice on beat, then dragging one note to metronome, rhythm, or music."
 
 puts "\n--- session 1f - 10 min --- transcription"
-puts "  3 licks for So What improv, Freddie Freeloader"
+puts "  3 licks for So What improv, more Freddie Freeloader"
 
 songs = practice_hash["songs"].shuffle(random:prng)
 record_choice = prng.rand(8)
@@ -90,7 +90,9 @@ for i_song in 0..(practice_hash['n_periods'] - 1)
   song = songs[i_song]
   puts "session #{i_song + 2} - #{practice_hash['session_time']} min --- #{song['name']}"
   puts "  #{song['primary_technique']} over #{practice_hash["backing_sources"].sample(random: prng)}"
+  puts "  solo technique - #{practice_hash['solo_techniques'].sample(random: prng)}"
   puts "  if time - #{song['extra_techniques'].sample(random: prng)}"
+
   #puts "  use the #{song['inversions'].sample(random: prng)} inversion, if appropriate."
   #puts "  focus on #{practice_hash['chord_styles'][0]} style chords"
   if record_choice == i_song
