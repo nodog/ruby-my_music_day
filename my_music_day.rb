@@ -66,7 +66,11 @@ end
 puts "  a scale practice method - #{scale_practice_method}"
 
 puts "\n--- session 1b - 5 min --- 2 octave arpeggio practice"
-puts "  chord order -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
+print "  chord order"
+if (prng.rand(1.0) > 0.5)
+  print " (SING)"
+end
+puts " -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
 puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
 
 puts "\n--- session 1c - 5 min --- ii-V-I practice"
