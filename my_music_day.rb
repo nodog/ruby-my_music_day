@@ -74,7 +74,7 @@ puts " -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
 puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
 
 puts "\n--- session 1c - 5 min --- ii-V-I practice"
-puts "  both hands, drop voicing (use: LH 3+7 RH 1+5 (or 9+13)), separate rhythms"
+puts "  chord style: #{practice_hash["chord_styles"].sample(random: prng)}"
 puts "  comping rhythm 1 -   |:  #{generate_comp_rhythm(prng)} :|"
 puts "  comping rhythm 2 -   |:  #{generate_comp_rhythm(prng)} :|"
 
