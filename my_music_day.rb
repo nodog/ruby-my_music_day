@@ -73,8 +73,9 @@ end
 puts " -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
 puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
 
-puts "\n--- session 1c - 5 min --- ii-V-I practice"
+puts "\n--- session 1c - 5 min --- progression practice"
 puts "  chord style: #{practice_hash["chord_styles"].sample(random: prng)}"
+puts "  chord progression: #{practice_hash["chord_progressions"].sample(random: prng)}"
 puts "  comping rhythm 1 -   |:  #{generate_comp_rhythm(prng)} :|"
 puts "  comping rhythm 2 -   |:  #{generate_comp_rhythm(prng)} :|"
 
@@ -83,9 +84,6 @@ puts "  In multiple octaves, find root minor key quartal voicings and plane."
 
 puts "\n--- session 1e - 1 min --- rushing/dragging practice"
 puts "  On key practice on beat, then dragging one note to metronome, rhythm, or music."
-
-puts "\n--- session 1f - 10 min --- transcription"
-puts "  3 licks for So What improv, more Freddie Freeloader"
 
 songs = practice_hash["songs"].shuffle(random:prng)
 record_choice = prng.rand(8)
