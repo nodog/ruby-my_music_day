@@ -63,7 +63,11 @@ scale_practice_method = practice_hash["scale practice method"].sample(random: pr
 if scale_practice_method == practice_hash["scale practice method"][2]
   scale_practice_method += " #{prng.rand(practice_hash["hanon exercise max"]) + 1}"
 end
-puts "  a scale practice method - #{scale_practice_method}"
+print "  a scale practice method - #{scale_practice_method}"
+if (prng.rand(1.0) > 0.5)
+  print " with SWING"
+end
+print "\n"
 
 puts "\n--- session 1b - 5 min --- 2 octave arpeggio practice"
 print "  chord order"
@@ -92,11 +96,11 @@ for i_song in 0..(practice_hash['n_periods'] - 1)
   song = songs[i_song]
   puts "session #{i_song + 2} - #{practice_hash['session_time']} min --- #{song['name']}"
   puts "  #{song['primary_technique']} over #{practice_hash["backing_sources"].sample(random: prng)}"
-  puts "  solo technique - #{practice_hash['solo_techniques'].sample(random: prng)}"
+  shuffled_solo_techniques = practice_hash['solo_techniques'].shuffle(random: prng)
+  puts "  solo technique 1 - #{shuffled_solo_techniques[0]}"
+  puts "  solo technique 2 - #{shuffled_solo_techniques[1]}"
   puts "  if time - #{song['extra_techniques'].sample(random: prng)}"
 
-  #puts "  use the #{song['inversions'].sample(random: prng)} inversion, if appropriate."
-  #puts "  focus on #{practice_hash['chord_styles'][0]} style chords"
   if record_choice == i_song
     puts '  RECORD AND LISTEN TO THIS!'
   end
