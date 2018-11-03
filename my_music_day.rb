@@ -48,7 +48,7 @@ end
 puts " based on seed #{seed}"
 puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
 puts "\n-----------------"
-puts 'session 1 - 17 min'
+puts 'session 1 - 18 min'
 print "  key - #{practice_hash['all_notes'].sample(random: prng)}"
 print "   metronome - #{generate_tempo(prng)}"
 puts "   style - #{practice_hash["metronome_styles"].sample(random: prng)}"
@@ -83,13 +83,18 @@ puts "  chord progression: #{practice_hash["chord_progressions"].sample(random: 
 puts "  comping rhythm 1 -   |:  #{generate_comp_rhythm(prng)} :|"
 puts "  comping rhythm 2 -   |:  #{generate_comp_rhythm(prng)} :|"
 
-puts "\n--- session 1d - 1 min --- quartal voicing"
+puts "\n--- session 1d - 1 min --- chords in key"
+puts "  Find viable chords in current key."
+
+puts "\n--- session 1e - 1 min --- So What quartal voicing"
 puts "  In multiple octaves, find root minor key quartal voicings and plane."
 
 puts "\n--- session 1e - 1 min --- rushing/dragging practice"
 puts "  On key practice on beat, then dragging one note to metronome, rhythm, or music."
 
+focus_song = practice_hash["focus_song"]
 songs = practice_hash["songs"].shuffle(random:prng)
+songs.insert(prng.rand(2), focus_song[0])
 record_choice = prng.rand(8)
 for i_song in 0..(practice_hash['n_periods'] - 1)
   puts "\n-----------------"
