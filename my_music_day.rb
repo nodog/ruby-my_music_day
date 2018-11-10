@@ -22,6 +22,12 @@ def generate_tempo(prng)
   prng.rand(80) + 80
 end
 
+def randomly_choose_to_sing(prng)
+  if (prng.rand(1.0) > 0.5)
+      print "  singing day "
+  end
+end
+
 if ARGV[0]
   if ARGV[0] == "random"
     seed = rand(BIG_INTEGER)
@@ -52,18 +58,20 @@ puts 'session 1 - 18 min'
 print "  key - #{practice_hash['all_notes'].sample(random: prng)}"
 print "   metronome - #{generate_tempo(prng)}"
 puts "   style - #{practice_hash["metronome_styles"].sample(random: prng)}"
-print "  arpeggio components - #{practice_hash["arp_components"].sample(random: prng)}"
+print "  chord components - #{practice_hash["arp_components"].sample(random: prng)}"
 print ", #{practice_hash["inversion_start"].sample(random: prng)}"
 puts ", #{practice_hash["arp_start"].sample(random: prng)} start"
+puts "  a scale - #{practice_hash["scales"].sample(random: prng)}"
+randomly_choose_to_sing(prng)
 puts "  connection style - #{practice_hash["connection_styles"][2]} with clean firm touch"
 
 puts "\n--- session 1a - 5 min --- scale practice"
-puts "  a scale - #{practice_hash["scales"].sample(random: prng)}"
 scale_practice_method = practice_hash["scale practice method"].sample(random: prng)
 if scale_practice_method == practice_hash["scale practice method"][2]
   scale_practice_method += " #{prng.rand(practice_hash["hanon exercise max"]) + 1}"
 end
-print "  a scale practice method - #{scale_practice_method}"
+print "  a scale practice method"
+print " - #{scale_practice_method}"
 if (prng.rand(1.0) > 0.5)
   print " with SWING"
 end
@@ -71,9 +79,6 @@ print "\n"
 
 puts "\n--- session 1b - 5 min --- 2 octave arpeggio practice"
 print "  chord order"
-if (prng.rand(1.0) > 0.5)
-  print " (SING)"
-end
 puts " -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
 puts "  arpeggio style - #{practice_hash["arp_styles"].sample(random: prng)}"
 

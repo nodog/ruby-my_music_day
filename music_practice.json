@@ -9,7 +9,7 @@
               "natural minor, aeolian: 6 of key - 1.0  0.5  1.0  1.0  0.5  1.0  1.0",
               "harmonic minor - 1.0  0.5  1.0  1.0  0.5  1.5  0.5",
               "melodic minor - 1.0  0.5  1.0  1.0  1.0  1.0  0.5",
-              "blues - 1.5  1.0  0.5  0.5  1.5 1.0",
+              "blues - 1.5  1.0  0.5  0.5  1.5  1.0",
               "dorian: 2 of key - 1.0  0.5  1.0  1.0  1.0  0.5  1.0 (played over m)",
               "mixolydian: 5 of key - 1.0  1.0  0.5  1.0  1.0  0.5  1.0 (played over 7)",
               "lydian: 4 of key - 1.0  1.0  1.0  0.5  1.0  1.0  0.5 (played over M7)"
@@ -61,15 +61,16 @@
   "backing_sources" : ["irealpro", "2&4 metronome", "quarter note metronome"],
   "focus_song" : [
              {"name" : "All of Me",
-              "primary_technique" : "head, chords & solo, head - move inversions while comping - play the changes",
-              "extra_techniques" : ["two handed voincings (double at first, then spread)"]}
+              "primary_technique" : "5 min melody (focus on fingering), 5 min chords, 5 min hands together",
+              "extra_techniques" : ["two handed voicings (double at first, then spread)"]}
               ],
   "songs" : [
              {"name" : "Blue Skies",
               "primary_technique" : "head, chords & solo, head - LH chords + RH fills",
               "extra_techniques" : ["triad splits 1-5 + 3-5 (no doubled 3rds unless melody note)",
                                     "rolled octaves",
-                                    "LH close voicing + RH octave double of descending note"]},
+                                    "LH close voicing + RH octave double of descending note",
+                                    "playing 6th below melody in bridge"]},
              {"name" : "Summertime",
               "primary_technique" : "Play my written arrangement looking at music. head, arp chords, head. Tempo = 30bpm. ",
               "extra_techniques" : ["primary: RH jazz arp up and down, melody in your head. extra: practice big hand transitions"]},
