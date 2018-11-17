@@ -59,14 +59,17 @@
                     "drop 2+4"],
   "metronome_styles" : ["quarter", "beats 2+4", "3/4", "beat 1 only", "4 on 4 off"],
   "backing_sources" : ["irealpro", "2&4 metronome", "quarter note metronome"],
-  "focus_song" : [
+  "focus_songs" : [
              {"name" : "All of Me",
-              "primary_technique" : "5 min melody (focus on fingering), 5 min chords, 5 min hands together",
-              "extra_techniques" : ["two handed voicings (double at first, then spread)"]}
+              "primary_technique" : "7.5m hands together head (focus metronome, chord xitions), 7.5m RH improv LH chords",
+              "extra_techniques" : ["improv - chord tones, especially guide tones @ fast changes"]},
+             {"name" : "Freddie Freeloader",
+              "primary_technique" : "melody, chords, but hands together ASAP",
+              "extra_techniques" : ["improv"]}
               ],
   "songs" : [
              {"name" : "Blue Skies",
-              "primary_technique" : "head, chords & solo, head - LH chords + RH fills",
+              "primary_technique" : "head, chords & solo, head - LH chords (comp rhythm to compliment melody) + RH fills and counter melodies",
               "extra_techniques" : ["triad splits 1-5 + 3-5 (no doubled 3rds unless melody note)",
                                     "rolled octaves",
                                     "LH close voicing + RH octave double of descending note",

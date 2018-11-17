@@ -99,9 +99,13 @@ puts "  comping rhythm 2 -   |:  #{generate_comp_rhythm(prng)} :|"
 puts "\n--- session 1d - 1 min --- chords in key"
 puts "  Find viable chords in current key."
 
-focus_song = practice_hash["focus_song"]
-songs = practice_hash["songs"].shuffle(random:prng)
-songs.insert(prng.rand(2), focus_song[0])
+focus_songs = practice_hash["focus_songs"]
+if focus_songs.length == 1
+  songs = practice_hash["songs"].shuffle(random:prng)
+  songs.insert(prng.rand(2), focus_songs[0])
+else
+  songs = focus_songs.shuffle(random:prng)
+end
 record_choice = prng.rand(8)
 for i_song in 0..(practice_hash['n_periods'] - 1)
   #puts "\n-----------------"
@@ -110,9 +114,9 @@ for i_song in 0..(practice_hash['n_periods'] - 1)
   puts "session #{i_song + 2} - #{practice_hash['session_time']} min --- #{song['name']}"
   puts "  #{song['primary_technique']} over #{practice_hash["backing_sources"].sample(random: prng)}"
   shuffled_solo_techniques = practice_hash['solo_techniques'].shuffle(random: prng)
+  puts "  if time - #{song['extra_techniques'].sample(random: prng)}"
   puts "  solo technique 1 - #{shuffled_solo_techniques[0]}"
   puts "  solo technique 2 - #{shuffled_solo_techniques[1]}"
-  puts "  if time - #{song['extra_techniques'].sample(random: prng)}"
 
   if record_choice == i_song
     puts '  RECORD AND LISTEN TO THIS!'
