@@ -60,7 +60,7 @@ puts " based on seed #{seed}"
 puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
 #puts "\n-----------------"
 puts "\n"
-print 'session 1 - 16 min'
+print 'session 1 - 21 min'
 puts sing_day
 print "  key - #{practice_hash['all_notes'].sample(random: prng)}"
 print "   metronome - #{generate_tempo(prng)}"
@@ -90,7 +90,7 @@ puts " -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
 print "  arpeggio style" + sing_day
 puts "- #{practice_hash["arp_styles"].sample(random: prng)}"
 
-puts "\n--- session 1c - 5 min --- progression practice"
+puts "\n--- session 1c - 10 min --- progression practice"
 puts "  chord style: #{practice_hash["chord_styles"].sample(random: prng)}"
 puts "  chord progression: #{practice_hash["chord_progressions"].sample(random: prng)}"
 puts "  comping rhythm 1 -   |:  #{generate_comp_rhythm(prng)} :|"
