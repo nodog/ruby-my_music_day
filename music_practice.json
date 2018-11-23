@@ -17,7 +17,7 @@
   "scales_rest" : ["whole tone - 1.0  1.0  1.0  1.0  1.0  1.0",
               "chromatic - sing while playing root only"
               ],
-  "chords" : ["6", "-6", "-7", "-7b5", "7", "°7", "◬7"],
+  "chords" : ["6", "-6", "-7", "ø7", "7", "°7", "◬7"],
   "arp_styles" : ["BH all notes as chords",
                   "BH all notes as chords including/excluding tensions",
                   "BH all notes as chords",

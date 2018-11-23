@@ -1,6 +1,19 @@
 #!/usr/bin/env ruby
 
-# TODO - make sure exercise section is in priority order
+# big ideas!
+# I want to move this to be an all encompassing practice program.
+# Until then, here's what I'm thinking
+# Mon - AM piano  PM bass  (note: kids music time on Mondays)
+# Tue - AM piano  PM piano
+# Wed - AM piano  PM guitar
+# Thu - AM piano  PM bass
+# Fri - AM piano  PM piano
+# Sat - AM piano  PM guitar
+# Sun - AM piano  PM music making
+
+# I want to be able to pick out sections that will be useful in each practice.
+# I want to be able to weight different options.
+# This definitely should be on a website.
 
 require 'json'
 require 'date'
@@ -88,7 +101,7 @@ puts "\n--- session 1b - 5 min --- 2 octave arpeggio practice"
 print "  chord order"
 puts " -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
 print "  arpeggio style" + sing_day
-puts "- #{practice_hash["arp_styles"].sample(random: prng)}"
+puts " - #{practice_hash["arp_styles"].sample(random: prng)}"
 
 puts "\n--- session 1c - 10 min --- progression practice"
 puts "  chord style: #{practice_hash["chord_styles"].sample(random: prng)}"
