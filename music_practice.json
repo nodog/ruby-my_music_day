@@ -60,12 +60,6 @@
   "metronome_styles" : ["quarter", "beats 2+4", "3/4", "beat 1 only", "4 on 4 off"],
   "backing_sources" : ["irealpro", "2&4 metronome", "quarter note metronome"],
   "focus_songs" : [
-             {"name" : "All of Me",
-              "primary_technique" : "7.5m hands together head (focus metronome, chord xitions), 7.5m RH improv LH chords",
-              "extra_techniques" : ["improv - chord tones, especially guide tones @ fast changes"]},
-             {"name" : "Freddie Freeloader",
-              "primary_technique" : "melody, chords, but hands together ASAP",
-              "extra_techniques" : ["improv"]}
               ],
   "songs" : [
              {"name" : "Blue Skies",
@@ -74,6 +68,12 @@
                                     "rolled octaves",
                                     "LH close voicing + RH octave double of descending note",
                                     "playing 6th below melody in bridge"]},
+             {"name" : "All of Me",
+              "primary_technique" : "7.5m hands together head (focus metronome, chord xitions), 7.5m RH improv LH chords",
+              "extra_techniques" : ["improv - chord tones, especially guide tones @ fast changes"]},
+             {"name" : "Freddie Freeloader",
+              "primary_technique" : "melody, chords, but hands together ASAP",
+              "extra_techniques" : ["improv"]},
              {"name" : "Summertime",
               "primary_technique" : "Play my written arrangement looking at music. head, arp chords, head. Tempo = 30bpm. ",
               "extra_techniques" : ["primary: RH jazz arp up and down, melody in your head. extra: practice big hand transitions"]},

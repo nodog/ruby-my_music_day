@@ -112,13 +112,15 @@ puts "  comping rhythm 2 -   |:  #{generate_comp_rhythm(prng)} :|"
 puts "\n--- session 1d - 1 min --- chords in key"
 puts "  Find viable chords in current key."
 
+songs = practice_hash["songs"].shuffle(random:prng)
+# if no focus_songs, do nothing, if 1, put it in first 2, otherwise, focus_songs take over
 focus_songs = practice_hash["focus_songs"]
 if focus_songs.length == 1
-  songs = practice_hash["songs"].shuffle(random:prng)
   songs.insert(prng.rand(2), focus_songs[0])
-else
+elsif focus_songs.length > 1
   songs = focus_songs.shuffle(random:prng)
 end
+
 record_choice = prng.rand(8)
 for i_song in 0..(practice_hash['n_periods'] - 1)
   #puts "\n-----------------"
