@@ -111,13 +111,13 @@ for i_song in 0..(practice_hash['n_periods'] - 1)
 end
 
 # EXERCISES
-puts "\n--- session 4a - 10 min --- progression rhythm practice"
+puts "\n--- session 3a - 10 min --- progression rhythm practice"
 puts "  chord style: #{practice_hash["chord_styles"].sample(random: prng)}"
 puts "  chord progression: #{practice_hash["chord_progressions"].sample(random: prng)}"
 puts "  comping rhythm 1 -   |:  #{generate_comp_rhythm(prng)} :|"
 puts "  comping rhythm 2 -   |:  #{generate_comp_rhythm(prng)} :|"
 
-puts "\n--- session 4a - 5 min --- scale practice"
+puts "\n--- session 3a - 5 min --- scale practice"
 if sing_day == ""
 
   scale_practice_method = practice_hash["scale practice method"].sample(random: prng)
@@ -135,22 +135,22 @@ else
   puts "  vocal warm up with scale"
 end
 
-puts "\n--- session 4b - 5 min --- 2 octave arpeggio practice"
+puts "\n--- session 3b - 5 min --- 2 octave arpeggio practice"
 print "  chord order"
 puts " -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
 print "  arpeggio style" + sing_day
 puts " - #{practice_hash["arp_styles"].sample(random: prng)}"
 
-puts "\n--- session 4d - 1 min --- chords in key"
+puts "\n--- session 3d - 1 min --- chords in key"
 puts "  Find viable chords in current key."
 
-puts "\n--- session 4e - 5-10 min --- sight reading"
+puts "\n--- session 3e - 5-10 min --- sight reading"
 puts "  Sight read as much as you can in an easy piano book!"
 
-puts "\n--- session 4f - 1 min --- rushing/dragging practice"
+puts "\n--- session 3f - 1 min --- rushing/dragging practice"
 puts "  On key practice on beat, then dragging one note to metronome, rhythm, or music."
 
-puts "\n--- session 4g - 1 min --- So What quartal voicing"
+puts "\n--- session 3g - 1 min --- So What quartal voicing"
 puts "  In multiple octaves, find root minor key quartal voicings and plane."
 
 # n_periods = practice_hash["n_periods"]
