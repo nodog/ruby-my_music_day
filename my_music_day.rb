@@ -34,7 +34,8 @@ def generate_comp_rhythm(prng)
 end
 
 def generate_tempo(prng)
-  prng.rand(prng.rand(80)) + 80
+  #prng.rand(prng.rand(80)) + 80
+  prng.rand(80) + 80
 end
 
 def should_i_sing(prng)

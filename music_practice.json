@@ -10,9 +10,11 @@
               "harmonic minor - 1.0  0.5  1.0  1.0  0.5  1.5  0.5",
               "melodic minor - 1.0  0.5  1.0  1.0  1.0  1.0  0.5",
               "blues - 1.5  1.0  0.5  0.5  1.5  1.0",
-              "dorian: 2 of key - 1.0  0.5  1.0  1.0  1.0  0.5  1.0 (played over m)",
-              "mixolydian: 5 of key - 1.0  1.0  0.5  1.0  1.0  0.5  1.0 (played over 7)",
-              "lydian: 4 of key - 1.0  1.0  1.0  0.5  1.0  1.0  0.5 (played over M7)"
+              "dorian: 2 of major - 1.0  0.5  1.0  1.0  1.0  0.5  1.0 (played over m)",
+              "mixolydian: 5 of major - 1.0  1.0  0.5  1.0  1.0  0.5  1.0 (played over 7)",
+              "lydian: 4 of major - 1.0  1.0  1.0  0.5  1.0  1.0  0.5 (played over ∆7)",
+              "lydian b7: 4 of major w/mod - 1.0  1.0  1.0  0.5  1.0  0.5  1.0 (played over 7#11)",
+              "locrian: 7 of major - 0.5  1.0  1.0  0.5  1.0  1.0  1.0 (played over ø7)"
               ],
   "scales_rest" : ["whole tone - 1.0  1.0  1.0  1.0  1.0  1.0",
               "chromatic - sing while playing root only"
@@ -62,11 +64,11 @@
   "backing_sources" : ["irealpro", "2&4 metronome", "quarter note metronome"],
   "focus_songs" : [
              {"name" : "All of Me",
-              "primary_technique" : "10m repeat 4 bar chord changes 5X no errors: chords, melody, BH. 5m playthrough",
-              "extra_techniques" : ["improv - chord tones, especially guide tones @ fast changes"]},
+                "primary_technique" : "head - 3 improv - 1 head - try one of b9 #9 #11 b13 in each dom7 chord",
+                "extra_techniques" : ["improv - ballad feel, use scales, use guide tones @ fast changes"]},
              {"name" : "Freddie Freeloader",
-              "primary_technique" : "melody, chords, but hands together ASAP. Feel triplets.",
-              "extra_techniques" : ["improv"]}
+                "primary_technique" : "head - 3 improv - 1 heard - think of LH & RH having conversation",
+                "extra_techniques" : ["Use E7 to get from F7 to Eb7. Add #11 to Ab7 & solo w/lydian b7."]}
               ],
   "songs" : [
              {"name" : "Blue Skies",
