@@ -64,10 +64,10 @@
   "backing_sources" : ["irealpro", "2&4 metronome", "quarter note metronome"],
   "focus_songs" : [
              {"name" : "All of Me",
-                "primary_technique" : "head - 3 improv - 1 head - try one of b9 #9 #11 b13 in each dom7 chord",
+                "primary_technique" : "1 head - 3 improv - 1 head - try one of b9 #9 #11 b13 in each dom7 chord",
                 "extra_techniques" : ["improv - ballad feel, use scales, use guide tones @ fast changes"]},
              {"name" : "Freddie Freeloader",
-                "primary_technique" : "head - 3 improv - 1 heard - think of LH & RH having conversation",
+                "primary_technique" : "1 head - 3 improv - 1 head - think of LH & RH having conversation",
                 "extra_techniques" : ["Use E7 to get from F7 to Eb7. Add #11 to Ab7 & solo w/lydian b7."]}
               ],
   "songs" : [
