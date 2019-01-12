@@ -95,11 +95,12 @@ elsif focus_songs.length > 1
 end
 
 record_choice = prng.rand(8)
-for i_song in 0..(practice_hash['n_periods'] - 1)
+n_songs = practice_hash['n_songs']
+for i_song in 0..(n_songs - 1)
   #puts "\n-----------------"
   puts "\n"
   song = songs[i_song]
-  puts "session #{i_song + 1} - #{practice_hash['session_time']} min --- #{song['name']}"
+  puts "--- session #{i_song + 1} - #{practice_hash['song_time']/n_songs} min --- #{song['name']}"
   puts "  #{song['primary_technique']} over #{practice_hash["backing_sources"].sample(random: prng)}"
   shuffled_solo_techniques = practice_hash['solo_techniques'].shuffle(random: prng)
   puts "  if time - #{song['extra_techniques'].sample(random: prng)}"
@@ -112,64 +113,62 @@ for i_song in 0..(practice_hash['n_periods'] - 1)
 end
 
 # EXERCISES
-puts "\n--- session 3a - 10 min --- progression rhythm practice"
-puts "  chord style: #{practice_hash["chord_styles"].sample(random: prng)}"
-puts "  chord progression: #{practice_hash["chord_progressions"].sample(random: prng)}"
-puts "  comping rhythm 1 -   |:  #{generate_comp_rhythm(prng)} :|"
-puts "  comping rhythm 2 -   |:  #{generate_comp_rhythm(prng)} :|"
-
-puts "\n--- session 3a - 5 min --- scale practice"
-if sing_day == ""
-
-  scale_practice_method = practice_hash["scale practice method"].sample(random: prng)
-  if scale_practice_method == practice_hash["scale practice method"][2]
-    scale_practice_method += " #{prng.rand(practice_hash["hanon exercise max"]) + 1}"
-  end
-  print "  a scale practice method"
-  print " - #{scale_practice_method}"
-  print sing_day
-  if (prng.rand(1.0) > 0.5)
-    print " with SWING"
-  end
-  print "\n"
-else
-  puts "  vocal warm up with scale"
+def generate_progression_rhythm_practice(practice_hash, prng)
+  puts "  chord style: #{practice_hash["chord_styles"].sample(random: prng)}"
+  puts "  chord progression: #{practice_hash["chord_progressions"].sample(random: prng)}"
+  puts "  comping rhythm 1 -   |:  #{generate_comp_rhythm(prng)} :|"
+  puts "  comping rhythm 2 -   |:  #{generate_comp_rhythm(prng)} :|"
 end
 
-puts "\n--- session 3b - 5 min --- 2 octave arpeggio practice"
-print "  chord order"
-puts " -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
-print "  arpeggio style" + sing_day
-puts " - #{practice_hash["arp_styles"].sample(random: prng)}"
+def generate_scales_practice(practice_hash, prng, sing_day)
+  if sing_day == ""
+    scale_practice_method = practice_hash["scale practice method"].sample(random: prng)
+    if scale_practice_method == practice_hash["scale practice method"][2]
+      scale_practice_method += " #{prng.rand(practice_hash["hanon exercise max"]) + 1}"
+    end
+    print "  a scale practice method"
+    print " - #{scale_practice_method}"
+    print sing_day
+    if (prng.rand(1.0) > 0.5)
+      print " with SWING"
+    end
+    print "\n"
+  else
+    puts "  vocal warm up with scale"
+  end
+end
 
-puts "\n--- session 3d - 1 min --- chords in key"
-puts "  Find viable chords in current key."
+def generate_arpeggios_practice(practice_hash, prng, sing_day)
+  print "  chord order"
+  puts " -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
+  print "  arpeggio style" + sing_day
+  puts " - #{practice_hash["arp_styles"].sample(random: prng)}"
+end
 
-puts "\n--- session 3e - 5-10 min --- sight reading"
-puts "  Sight read as much as you can in an easy piano book!"
-
-puts "\n--- session 3f - 1 min --- rushing/dragging practice"
-puts "  On key practice on beat, then dragging one note to metronome, rhythm, or music."
-
-puts "\n--- session 3g - 1 min --- So What quartal voicing"
-puts "  In multiple octaves, find root minor key quartal voicings and plane."
-
-# n_periods = practice_hash["n_periods"]
-# period_time = practice_hash["total_time"]/n_periods
-# for i_session in 1..n_periods do
-#   puts '-----------------'
-#   puts "session #{i_session + 3} - #{period_time} min"
+n_exercises = practice_hash["n_exercises"]
+exercise_time = practice_hash["exercise_time"]/n_exercises
+shuffled_activities = practice_hash["activities"].shuffle(random: prng)
+for i_session in 1..n_exercises do
+  print "\n--- session #{i_session + n_songs} - #{exercise_time} min"
 #   puts "instrument = #{practice_hash["instruments"].sample(random: prng)}"
-#   #activity = practice_hash["activities"].sample(random: prng)
-#   # temporarily choose sight readig always
-#   activity = practice_hash["activities"][7]
-#   puts "activity = \n  #{activity["activity"]}"
+  activity = shuffled_activities[i_session - 1]
+  puts " - #{activity}"
+
+  case activity
+  when "progression rhythm practice"
+    generate_progression_rhythm_practice(practice_hash, prng)
+  when   "scales"
+    generate_scales_practice(practice_hash, prng, sing_day)
+  when "arpeggios"
+    generate_arpeggios_practice(practice_hash, prng, sing_day)
+  end
+
 #   goal_numbers = activity["goals"]
 #   puts "  goals to keep in mind:"
 #   for i_goal in 0..goal_numbers.size - 1 do
 #     puts "    - #{practice_hash["goals"][goal_numbers[i_goal].to_s]}"
 #   end
-# end
+end
 
 # puts '-----------------'
 
