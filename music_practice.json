@@ -67,7 +67,8 @@
   "focus_songs" : [
              {"name" : "All of Me",
                 "primary_technique" : "1 head - 3 improv - 1 head - try one of b9 #9 #11 b13 in each dom7 chord",
-                "extra_techniques" : ["exercise - play through lower approach notes and chord tones, start on pickup 'and'"]},
+                "extra_techniques" : ["exercise - play through lower approach notes and chord tones, start on pickup 'and'"],
+                "extra_techniques" : ["use 5th mode of A harmonic minor over E7b9, use lydian dominant (b7) over D7#11"]},
              {"name" : "Freddie Freeloader",
                 "primary_technique" : "1 head - 3 improv - 1 head - think of LH & RH having conversation",
                 "extra_techniques" : ["comp light and sparse, keep head simple, separate melodies from fills",
