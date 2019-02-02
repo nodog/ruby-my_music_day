@@ -130,15 +130,6 @@
                        "think about structural aspects: simple to complex, short to long, repeats, and space"],
   "exercise_time" : 15,
   "n_exercises" : 3,
-<<<<<<< HEAD
-  "activities" : ["progression rhythm practice",
-    "child-like practice or play - Chameleon",
-    "sing and play simultaneously ('point and sing')",
-    "sight reading",
-    "scales",
-    "arpeggios",
-    "6th/7th chord inversions and planing, and quartal chord planing",
-=======
   "activities" : [
     "progression rhythm practice",
     "arpeggios",
@@ -146,10 +137,10 @@
     "real book practice" ],
   "activities_rest" : [
     "practice singing an octave below what is being played",
-    "child-like practice or play",
+    "child-like practice or play - Chameleon",
     "sight reading",
+    "sing and play simultaneously ('point and sing')",
     "scales",
-    "triad chord inversions and planing, and quartal chord planing",
->>>>>>> 9edc9bb649062773ca0626fc7d94ee04f79cc43a
+    "6th/7th chord inversions and planing, and quartal chord planing",
     "rushing/dragging + chords in key"]
 }
