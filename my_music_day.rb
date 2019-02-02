@@ -143,6 +143,8 @@ def generate_arpeggios_practice(practice_hash, prng, sing_day)
   puts " -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
   print "  arpeggio style" + sing_day
   puts " - #{practice_hash["arp_styles"].sample(random: prng)}"
+  print "  chord style"
+  puts " - #{practice_hash["chord_styles"].sample(random: prng)}"
 end
 
 n_exercises = practice_hash["n_exercises"]
