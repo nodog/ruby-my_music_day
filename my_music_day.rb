@@ -40,7 +40,7 @@ end
 
 def should_i_sing(prng)
   if (prng.rand(1.0) > 0.5)
-    return " - SING "
+    return " - SING"
   else
     return ""
   end
@@ -121,21 +121,19 @@ def generate_progression_rhythm_practice(practice_hash, prng)
 end
 
 def generate_scales_practice(practice_hash, prng, sing_day)
-  if sing_day == ""
-    scale_practice_method = practice_hash["scale practice method"].sample(random: prng)
-    if scale_practice_method == practice_hash["scale practice method"][2]
-      scale_practice_method += " #{prng.rand(practice_hash["hanon exercise max"]) + 1}"
-    end
-    print "  a scale practice method"
-    print " - #{scale_practice_method}"
-    print sing_day
-    if (prng.rand(1.0) > 0.5)
-      print " with SWING"
-    end
-    print "\n"
+  print "  a scale practice method"
+  scale_practice_method = practice_hash["scale practice methods"].sample(random: prng)
+  if scale_practice_method == "Hanon"
+    scale_practice_method += " #{prng.rand(practice_hash["hanon exercise max"]) + 1}"
   else
-    puts "  vocal warm up with scale"
+    scale_practice_method += " using #{practice_hash["scale practice intervals"].sample(random: prng)}"
   end
+  print " - #{scale_practice_method}"
+  print sing_day
+  if (prng.rand(1.0) > 0.5)
+    print " with SWING"
+  end
+  print "\n"
 end
 
 def generate_arpeggios_practice(practice_hash, prng, sing_day)
