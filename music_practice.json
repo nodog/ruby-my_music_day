@@ -66,7 +66,7 @@
                     "drop 2",
                     "drop 3",
                     "drop 2+4" ],
-  "metronome_styles" : ["quarter", "beats 2+4", "3/4", "beat 1 only", "4 on 4 off"],
+  "metronome_styles" : ["quarter", "beats 2+4", "beats 2+4", "3/4", "5/4", "6/8", "7/4", "beat 1 only", "beat 1 only", "4 on 4 off", "4 on 4 off"],
   "backing_sources" : ["irealpro", "2&4 metronome", "quarter note metronome"],
   "n_songs" : 2,
   "song_time" : 30,
