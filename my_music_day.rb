@@ -103,7 +103,7 @@ for i_song in 0..(n_songs - 1)
   puts "--- session #{i_song + 1} - #{practice_hash['song_time']/n_songs} min --- #{song['name']}"
   puts "  #{song['primary_technique']} over #{practice_hash["backing_sources"].sample(random: prng)}"
   shuffled_solo_techniques = practice_hash['solo_techniques'].shuffle(random: prng)
-  puts "  if time - #{song['extra_techniques'].sample(random: prng)}"
+  puts "  extra - #{song['extra_techniques'].sample(random: prng)}"
   puts "  solo technique 1 - #{shuffled_solo_techniques[0]}"
   puts "  solo technique 2 - #{shuffled_solo_techniques[1]}"
 
