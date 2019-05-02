@@ -46,6 +46,22 @@ def should_i_sing(prng)
   end
 end
 
+def generate_scales_practice(practice_hash, prng, sing_day)
+  print "  a scale practice method"
+  scale_practice_method = practice_hash["scale practice methods"].sample(random: prng)
+  if scale_practice_method == "Hanon"
+    scale_practice_method += " #{prng.rand(practice_hash["hanon exercise max"]) + 1}"
+  else
+    scale_practice_method += " using #{practice_hash["scale practice intervals"].sample(random: prng)}"
+  end
+  print " - #{scale_practice_method}"
+  print sing_day
+  if (prng.rand(1.0) > 0.5)
+    print " with SWING"
+  end
+  print "\n"
+end
+
 if ARGV[0]
   if ARGV[0] == "random"
     seed = rand(BIG_INTEGER)
@@ -82,7 +98,9 @@ print "  chord components - #{practice_hash["arp_components"].sample(random: prn
 print ", #{practice_hash["inversion_start"].sample(random: prng)}"
 puts ", #{practice_hash["arp_start"].sample(random: prng)} start"
 puts "  a scale - #{practice_hash["scales"].sample(random: prng)}"
-puts "  connection style - #{practice_hash["connection_styles"][2]} with clean firm touch"
+generate_scales_practice(practice_hash, prng, sing_day)
+#puts "  connection style - #{practice_hash["connection_styles"][2]} with clean firm touch"
+puts "  1..4 in random order - #{[1,2,3,4].shuffle(random: prng)}"
 
 # SONGS
 songs = practice_hash["songs"].shuffle(random:prng)
@@ -120,21 +138,6 @@ def generate_progression_rhythm_practice(practice_hash, prng)
   puts "  comping rhythm 2 -   |:  #{generate_comp_rhythm(prng)} :|"
 end
 
-def generate_scales_practice(practice_hash, prng, sing_day)
-  print "  a scale practice method"
-  scale_practice_method = practice_hash["scale practice methods"].sample(random: prng)
-  if scale_practice_method == "Hanon"
-    scale_practice_method += " #{prng.rand(practice_hash["hanon exercise max"]) + 1}"
-  else
-    scale_practice_method += " using #{practice_hash["scale practice intervals"].sample(random: prng)}"
-  end
-  print " - #{scale_practice_method}"
-  print sing_day
-  if (prng.rand(1.0) > 0.5)
-    print " with SWING"
-  end
-  print "\n"
-end
 
 def generate_arpeggios_practice(practice_hash, prng, sing_day)
   print "  chord order"
@@ -157,8 +160,6 @@ for i_session in 1..n_exercises do
   case activity
   when "progression rhythm practice"
     generate_progression_rhythm_practice(practice_hash, prng)
-  when   "scales"
-    generate_scales_practice(practice_hash, prng, sing_day)
   when "arpeggios"
     generate_arpeggios_practice(practice_hash, prng, sing_day)
   end
