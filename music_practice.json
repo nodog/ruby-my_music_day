@@ -77,6 +77,9 @@
              {"name" : "Blue Bossa",
                 "primary_technique" : "Practice chords, walk bass, melody, and soloing (SING) while playing choruses now. Play 1 chord arp.",
                 "extra_techniques" : ["Sing and play."]},
+             {"name" : "Let It Go",
+                "primary_technique" : "Transcribe as much as you can.",
+                "extra_techniques" : ["Sing and play."]},
              {"name" : "Oleo",
                 "primary_technique" : "Practice chords, walk bass, melody, and soloing (SING) while playing choruses now. Play 1 chord arp.",
                 "extra_techniques" : ["SING Bb major pentatonic solo. Get the B♮ in the right place (not over C- or Dø)."]}
@@ -137,15 +140,15 @@
   "n_exercises" : 3,
   "activities" : [
     "progression rhythm practice",
-    "arpeggios",
     "real book practice",
-    "transcribe solos",
-    "transcribe Trevor's walking bass patterns",
-    "put clave into musescore and fix Freddie licks",
-    "practice coming in before the 1"
+    "arpeggios"
     ],
   "activities_rest" : [
     "practice singing an octave below what is being played",
+    "transcribe Trevor's walking bass patterns",
+    "practice coming in before the 1",
+    "put clave into musescore and fix Freddie licks",
+    "transcribe solos",
     "rhythm app",
     "scales",
     "child-like practice or play - Chameleon",
