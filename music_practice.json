@@ -84,6 +84,9 @@
              {"name" : "Summertime in Dm",
                 "primary_technique" : "Learn the song in a new key.",
                 "extra_techniques" : ["Sing and play."]},
+             {"name" : "my composition",
+                "primary_technique" : "Move it forward. Add to the chord progression. Add to the melody.",
+                "extra_techniques" : ["Sing and play."]},
              {"name" : "Let It Go",
                 "primary_technique" : "Transcribe as much as you can. Rhythm of chorus.",
                 "extra_techniques" : ["Sing and play."]},
@@ -149,6 +152,7 @@
     "progression rhythm practice",
     "real book practice",
     "play single notes in LH & RH and recognize the interval",
+    "go through and describe all intervals in my own terms",
     "arpeggios"
     ],
   "activities_rest" : [

@@ -101,6 +101,7 @@ puts "  a scale - #{practice_hash["scales"].sample(random: prng)}"
 generate_scales_practice(practice_hash, prng, sing_day)
 puts "  sing up & down major w/alternating root w & w/o piano."
 puts "  sing up & down chromatic w/piano."
+puts "  sight sing exercises 1-3."
 #puts "  connection style - #{practice_hash["connection_styles"][2]} with clean firm touch"
 puts "  1..4 in random order - #{[1,2,3,4].shuffle(random: prng)}"
 
