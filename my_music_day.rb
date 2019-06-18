@@ -87,10 +87,11 @@ if date_of
   print " for the date of #{date_of}"
 end
 puts " based on seed #{seed}"
+puts "1..4 in random order - #{[1,2,3,4].shuffle(random: prng)}"
 puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
 #puts "\n-----------------"
 puts "\n"
-puts sing_day
+#puts sing_day
 print "  key - #{practice_hash['all_notes'].sample(random: prng)}"
 print "   metronome - #{generate_tempo(prng)}"
 puts "   style - #{practice_hash["metronome_styles"].sample(random: prng)}"
@@ -99,11 +100,12 @@ print ", #{practice_hash["inversion_start"].sample(random: prng)}"
 puts ", #{practice_hash["arp_start"].sample(random: prng)} start"
 puts "  a scale - #{practice_hash["scales"].sample(random: prng)}"
 generate_scales_practice(practice_hash, prng, sing_day)
-puts "  sing up & down major w/alternating root w & w/o piano."
-puts "  sing up & down chromatic w/piano."
-puts "  sight sing exercises 1-3."
+puts ''
+puts '  warmup - play and sing-to-find random notes above.'
+puts '  sing up & down major w/alternating root w & w/o piano.'
+puts '  sing up & down chromatic w/piano.'
+puts '  sight sing exercises 4-6.'
 #puts "  connection style - #{practice_hash["connection_styles"][2]} with clean firm touch"
-puts "  1..4 in random order - #{[1,2,3,4].shuffle(random: prng)}"
 
 # SONGS
 songs = practice_hash["songs"].shuffle(random:prng)
