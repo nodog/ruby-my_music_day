@@ -75,17 +75,23 @@
                     "drop 2+4" ],
   "metronome_styles" : ["quarter", "beats 2+4", "beats 2+4", "3/4", "5/4", "6/8", "7/4", "beat 1 only", "beat 1 only", "4 on 4 off", "4 on 4 off"],
   "backing_sources" : ["irealpro", "2&4 metronome", "quarter note metronome"],
-  "n_songs" : 2,
-  "song_time" : 30,
-  "focus_songs" : [
+  "n_goals" : 2,
+  "goal_time" : 30,
+  "focus_goals" : [
              {"name" : "Blue Bossa",
                 "primary_technique" : "Practice chords, walk bass, melody, and soloing (SING) while playing choruses now. Play 1 chord arp.",
                 "extra_techniques" : ["Sing and play."]},
              {"name" : "Summertime in Dm",
                 "primary_technique" : "Learn the song in a new key.",
                 "extra_techniques" : ["Sing and play."]},
-             {"name" : "my composition",
-                "primary_technique" : "Move it forward. Add to the chord progression. Add to the melody.",
+             {"name" : "Solid Dead Eye",
+                "primary_technique" : "Practice it to record it.",
+                "extra_techniques" : ["Sing and play."]},
+             {"name" : "help Nobie get better",
+                "primary_technique" : "Look ahead to prepare. Think about how to keep it fun!",
+                "extra_techniques" : ["Sing and play."]},
+             {"name" : "learn guitar chords up the neck",
+                "primary_technique" : "Try to play Let It Go or another kids song with different chord voicings.",
                 "extra_techniques" : ["Sing and play."]},
              {"name" : "Let It Go",
                 "primary_technique" : "Transcribe as much as you can. Rhythm of chorus.",
@@ -94,7 +100,7 @@
                 "primary_technique" : "Practice chords, walk bass, melody, and soloing (SING) while playing choruses now. Play 1 chord arp.",
                 "extra_techniques" : ["SING Bb major pentatonic solo. Get the B♮ in the right place (not over C- or Dø)."]}
               ],
-  "songs" : [
+  "goals" : [
              {"name" : "All of Me",
                 "primary_technique" : "comp (long notes) 2 choruses - sing(8vb?)&solo 2 choruses - 1-3-1 playthrough - listen and xscribe solo",
                 "extra_techniques" : ["exercise - play through lower approach notes and chord tones, start on pickup 'and'",

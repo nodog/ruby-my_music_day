@@ -1,16 +1,5 @@
 #!/usr/bin/env ruby
 
-# big ideas!
-# I want to move this to be an all encompassing practice program.
-# Until then, here's what I'm thinking
-# Mon - AM piano  PM bass  (note: kids music time on Mondays)
-# Tue - AM piano  PM piano
-# Wed - AM piano  PM guitar
-# Thu - AM piano  PM bass
-# Fri - AM piano  PM piano
-# Sat - AM piano  PM guitar
-# Sun - AM piano  PM music making
-
 # I want to be able to pick out sections that will be useful in each practice.
 # I want to be able to weight different options.
 # This definitely should be on a website.
@@ -101,36 +90,36 @@ puts ", #{practice_hash["arp_start"].sample(random: prng)} start"
 puts "  a scale - #{practice_hash["scales"].sample(random: prng)}"
 generate_scales_practice(practice_hash, prng, sing_day)
 puts ''
-puts '  warmup - play and sing-to-find random notes above.'
-puts '  sing up & down major w/alternating root w & w/o piano.'
-puts '  sing up & down chromatic w/piano.'
-puts '  sight sing exercises 4-6.'
+puts '  warmup - play and sing-to-find random notes above in my range.'
+puts '  sing & play; root & sing -  up & down major w/alternating root w & w/o piano.'
+puts '  sing & play; root & sing - up & down chromatic w/piano.'
+puts '  sing & play; root & sing - sight sing exercises 4-6.'
 #puts "  connection style - #{practice_hash["connection_styles"][2]} with clean firm touch"
 
-# SONGS
-songs = practice_hash["songs"].shuffle(random:prng)
-# if no focus_songs, do nothing, if 1, put it in first 2, otherwise, focus_songs take over
-focus_songs = practice_hash["focus_songs"]
-if focus_songs.length == 1
-  songs.insert(prng.rand(2), focus_songs[0])
-elsif focus_songs.length > 1
-  songs = focus_songs.shuffle(random:prng)
+# GOALS
+goals = practice_hash["goals"].shuffle(random:prng)
+# if no focus_goals, do nothing, if 1, put it in first 2, otherwise, focus_goals take over
+focus_goals = practice_hash["focus_goals"]
+if focus_goals.length == 1
+  goals.insert(prng.rand(2), focus_goals[0])
+elsif focus_goals.length > 1
+  goals = focus_goals.shuffle(random:prng)
 end
 
 record_choice = prng.rand(8)
-n_songs = practice_hash['n_songs']
-for i_song in 0..(n_songs - 1)
+n_goals = practice_hash['n_goals']
+for i_goal in 0..(n_goals - 1)
   #puts "\n-----------------"
   puts "\n"
-  song = songs[i_song]
-  puts "--- session #{i_song + 1} - #{practice_hash['song_time']/n_songs} min --- #{song['name']}"
-  puts "  #{song['primary_technique']} over #{practice_hash["backing_sources"].sample(random: prng)}"
+  goal = goals[i_goal]
+  puts "--- session #{i_goal + 1} - #{practice_hash['goal_time']/n_goals} min --- #{goal['name']}"
+  puts "  #{goal['primary_technique']} over #{practice_hash["backing_sources"].sample(random: prng)}"
   shuffled_solo_techniques = practice_hash['solo_techniques'].shuffle(random: prng)
-  puts "  extra - #{song['extra_techniques'].sample(random: prng)}"
+  puts "  extra - #{goal['extra_techniques'].sample(random: prng)}"
   puts "  solo technique 1 - #{shuffled_solo_techniques[0]}"
   puts "  solo technique 2 - #{shuffled_solo_techniques[1]}"
 
-  if record_choice == i_song
+  if record_choice == i_goal
     puts '  RECORD AND LISTEN TO THIS!'
   end
 end
@@ -157,7 +146,7 @@ n_exercises = practice_hash["n_exercises"]
 exercise_time = practice_hash["exercise_time"]/n_exercises
 shuffled_activities = practice_hash["activities"].shuffle(random: prng)
 for i_session in 1..n_exercises do
-  print "\n--- session #{i_session + n_songs} - #{exercise_time} min"
+  print "\n--- session #{i_session + n_goals} - #{exercise_time} min"
 #   puts "instrument = #{practice_hash["instruments"].sample(random: prng)}"
   activity = shuffled_activities[i_session - 1]
   puts " - #{activity}"
