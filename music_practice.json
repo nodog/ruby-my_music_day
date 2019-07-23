@@ -96,11 +96,14 @@
              {"name" : "Let It Go",
                 "primary_technique" : "Transcribe as much as you can. Rhythm of chorus.",
                 "extra_techniques" : ["Sing and play."]},
-             {"name" : "Oleo",
-                "primary_technique" : "Practice chords, walk bass, melody, and soloing (SING) while playing choruses now. Play 1 chord arp.",
-                "extra_techniques" : ["SING Bb major pentatonic solo. Get the B♮ in the right place (not over C- or Dø)."]}
+             {"name" : "Find piece in Essential Keyboard Repertoire",
+                "primary_technique" : "Try playing through something.",
+                "extra_techniques" : [""]}
               ],
   "goals" : [
+             {"name" : "Oleo",
+                "primary_technique" : "Practice chords, walk bass, melody, and soloing (SING) while playing choruses now. Play 1 chord arp.",
+                "extra_techniques" : ["SING Bb major pentatonic solo. Get the B♮ in the right place (not over C- or Dø)."]},
              {"name" : "All of Me",
                 "primary_technique" : "comp (long notes) 2 choruses - sing(8vb?)&solo 2 choruses - 1-3-1 playthrough - listen and xscribe solo",
                 "extra_techniques" : ["exercise - play through lower approach notes and chord tones, start on pickup 'and'",

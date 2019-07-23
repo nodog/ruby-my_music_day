@@ -94,7 +94,7 @@ puts ''
 puts '  warmup - play and sing-to-find random notes above in my range.'
 puts '  sing & play; root & sing - up & down major w/alternating root w & w/o piano.'
 puts '  sing & play; root & sing - up & down chromatic w/piano.'
-puts '  sing & play; root & sing; root & auralize - sight sing exercises 10-12.'
+puts '  tonicize (I-IV-I-V-I); root & sing; root & auralize - sight sing exercises 16-18.'
 #puts "  connection style - #{practice_hash["connection_styles"][2]} with clean firm touch"
 
 # GOALS
