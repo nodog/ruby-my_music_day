@@ -91,7 +91,10 @@ puts ", #{practice_hash["arp_start"].sample(random: prng)} start"
 puts "  a scale - #{practice_hash["scales"].sample(random: prng)}"
 generate_scales_practice(practice_hash, prng, sing_day)
 puts ''
-puts '  warmup - play and sing-to-find random notes above in my range.'
+puts "  warmup scales - major, harmonic minor, melodic minor, natural minor in today\'s root."
+puts '  warmup chords - I IV I V I (triads in major), i iv i V i (triads in harmonic minor)'
+puts '  warmup voice - play and sing major scales in my range.'
+puts '  warmup voice - play and sing-to-find random notes above in my range.'
 puts '  sing & play; root & sing - up & down major w/alternating root w & w/o piano.'
 puts '  sing & play; root & sing - up & down chromatic w/piano.'
 puts '  tonicize (I-IV-I-V-I triads); root & sing; root & auralize - sight sing exercises 17-20.'
