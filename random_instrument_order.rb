@@ -31,8 +31,21 @@ instruments = instruments.shuffle(random: prng)
 drums_placement = prng.rand(instruments.size - 1) + 1
 instruments.insert(drums_placement, 'drums')
 
-piano_placement = prng.rand(2)*(-1) - 1
-instruments.insert(piano_placement, 'piano - new songs')
+# piano skills anywhere
+piano_skills_placement = prng.rand(instruments.size)
+# piano songs afternoon
+piano_songs_placement = prng.rand(2)*(-1) - 1
+
+#if piano skills afternoon
+if piano_skills_placement > 2
+  # not the break
+  piano_skills_placement += 1
+  #and piano songs morning
+  piano_songs_placement = prng.rand(3)
+end
+
+instruments.insert(piano_skills_placement, 'piano - skills')
+instruments.insert(piano_songs_placement, 'piano - new songs')
 
 puts
 puts '---------------------------'
