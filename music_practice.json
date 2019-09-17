@@ -85,19 +85,10 @@
                 "primary_technique" : "Learn the song in a new key. Practice chords, walk bass, melody, and soloing (SING).",
                 "extra_techniques" : ["Sing and play. Soloing in Dm, Dm harmonic (reserve C# for A7, passing tones for ii-V7-I)."]},
              {"name" : "Solid Dead Eye",
-                "primary_technique" : "Practice it to record it. Practice soloing RH chord by chord in LH.",
+                "primary_technique" : "Practice it to record it. RECORD AND LISTEN. Practice soloing RH chord by chord in LH.",
                 "extra_techniques" : ["Sing and play."]},
-             {"name" : "help Nobie get better",
-                "primary_technique" : "Let It Go on guitar. Look ahead to prepare. Think about how to keep it fun!",
-                "extra_techniques" : ["Sing and play."]},
-             {"name" : "learn guitar chords up the neck",
-                "primary_technique" : "Try to play Let It Go or another kids song with different chord voicings.",
-                "extra_techniques" : ["Sing and play."]},
-             {"name" : "Let It Go",
-                "primary_technique" : "Transcribe as much as you can. Rhythm of chorus.",
-                "extra_techniques" : ["Sing and play."]},
-             {"name" : "Find piece in Essential Keyboard Repertoire",
-                "primary_technique" : "Try playing through something.",
+             {"name" : "Play Bach's Minuet",
+                "primary_technique" : "Write up the notes that give you trouble. Measure by measure hands together.",
                 "extra_techniques" : [""]}
               ],
   "goals" : [
@@ -161,7 +152,6 @@
     "progression rhythm practice",
     "real book practice",
     "play single notes in LH & RH and recognize the interval",
-    "go through and describe all intervals in my own terms",
     "arpeggios"
     ],
   "activities_rest" : [

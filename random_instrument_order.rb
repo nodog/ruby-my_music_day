@@ -22,9 +22,13 @@ end
 
 prng = Random.new(seed)
 
-instruments = ['voice',
-               'guitar',
-               'bass']
+instruments = ['voice']
+
+if seed.even?()
+  instruments.push('guitar')
+else
+  instruments.push('bass')
+end
 
 instruments = instruments.shuffle(random: prng)
 
