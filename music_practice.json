@@ -79,16 +79,16 @@
   "goal_time" : 30,
   "focus_goals" : [
              {"name" : "Blue Bossa",
-                "primary_technique" : "Practice chords, walk bass, melody, and soloing (SING) while playing choruses now. Play 1 chord arp.",
-                "extra_techniques" : ["Sing and play."]},
+                "primary_technique" : "Practice chords, walk bass, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing.",
+                "extra_techniques" : ["Practice looseness."]},
              {"name" : "Summertime in Dm",
-                "primary_technique" : "Learn the song in a new key. Practice chords, walk bass, melody, and soloing (SING).",
+                "primary_technique" : "Practice chords, walk bass, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing.",
                 "extra_techniques" : ["Sing and play. Soloing in Dm, Dm harmonic (reserve C# for A7, passing tones for ii-V7-I)."]},
              {"name" : "Solid Dead Eye",
                 "primary_technique" : "Practice it to record it. RECORD AND LISTEN. Practice soloing RH chord by chord in LH.",
-                "extra_techniques" : ["Sing and play."]},
+                "extra_techniques" : ["Practice loosness."]},
              {"name" : "Play Bach's Minuet",
-                "primary_technique" : "Write up the notes that give you trouble. Measure by measure hands together.",
+                "primary_technique" : "Mark up the notes that give you trouble. Measure by measure hands together.",
                 "extra_techniques" : [""]}
               ],
   "goals" : [

@@ -76,7 +76,7 @@ if date_of
   print " for the date of #{date_of}"
 end
 puts " based on seed #{seed}"
-puts "1..4 in random order - #{[1,2,3,4].shuffle(random: prng)}"
+puts "1..8 in random order - #{[1,2,3,4,5,6,7,8].shuffle(random: prng)}"
 puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
 #puts "\n-----------------"
 puts "\n"
@@ -119,7 +119,8 @@ for i_goal in 0..(n_goals - 1)
   puts "\n"
   goal = goals[i_goal]
   puts "--- session #{i_goal + 1} - #{practice_hash['goal_time']/n_goals} min --- #{goal['name']}"
-  puts "  #{goal['primary_technique']} over #{practice_hash["backing_sources"].sample(random: prng)}"
+  puts "  #{goal['primary_technique']}"
+  # add back??  "over #{practice_hash["backing_sources"].sample(random: prng)}"
   shuffled_solo_techniques = practice_hash['solo_techniques'].shuffle(random: prng)
   puts "  extra - #{goal['extra_techniques'].sample(random: prng)}"
   puts "  solo technique 1 - #{shuffled_solo_techniques[0]}"
