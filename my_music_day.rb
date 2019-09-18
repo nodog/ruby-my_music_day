@@ -99,6 +99,7 @@ puts '  warmup voice - play and sing-to-find random notes above in my range.'
 puts '  sing & play; root & sing - up & down major w/alternating root w & w/o piano.'
 puts '  sing & play; root & sing - up & down chromatic w/piano.'
 puts '  tonicize (I-IV-I-V-I triads); root & sing; root & auralize - sight sing exercises 17-20.'
+puts '  sing a song.'
 puts '  play a backing track, vocal improv + piano doubling'
 #puts "  connection style - #{practice_hash["connection_styles"][2]} with clean firm touch"
 
