@@ -22,24 +22,24 @@ end
 
 prng = Random.new(seed)
 
-instruments = ['45 - voice']
+instruments = ['  :45 - voice']
 
 if prng.rand() < 0.5
-  instruments.push('30 - bass')
+  instruments.push('  :30 - bass')
 else
-  instruments.push('30 - guitar')
+  instruments.push('  :30 - guitar')
 end
 
 if prng.rand() < 0.5
-  instruments.push('30 - piano - xscription')
+  instruments.push('  :30 - piano - xscription and paperstuff')
 else
-  instruments.push('30 - piano - repertoire')
+  instruments.push('  :30 - piano - repertoire')
 end
 
 instruments = instruments.shuffle(random: prng)
 
 drums_placement = prng.rand(instruments.size - 1) + 1
-instruments.insert(drums_placement, '45 - drums')
+instruments.insert(drums_placement, '  :45 - drums')
 
 # piano skills anywhere
 piano_skills_placement = prng.rand(instruments.size)
@@ -54,9 +54,9 @@ if piano_skills_placement > 2
   piano_songs_placement = prng.rand(3)
 end
 
-instruments.insert(piano_skills_placement, '30 - piano - skills')
-instruments.insert(piano_songs_placement, '30 - piano - new songs')
-instruments.insert(0, '15 - piano - warmups')
+instruments.insert(piano_skills_placement, '  :30 - piano - skills')
+instruments.insert(piano_songs_placement, '  :30 - piano - new songs')
+instruments.insert(0, '  :15 - piano - warmups')
 
 puts
 puts '---------------------------'
