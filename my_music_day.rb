@@ -5,7 +5,7 @@
 # This definitely should be on a website.
 
 require 'json'
-require 'date'
+require_relative 'regular_seed_lib'
 
 BIG_INTEGER = 99999999
 
@@ -51,30 +51,16 @@ def generate_scales_practice(practice_hash, prng, sing_day)
   print "\n"
 end
 
-if ARGV[0]
-  if ARGV[0] == "random"
-    seed = rand(BIG_INTEGER)
-  elsif ARGV[0] == "tomorrow"
-    tomorrow = Date.today + 1
-    seed = tomorrow.year() * 1000 + tomorrow.yday()
-    date_of = tomorrow.strftime("%F")
-  else
-    seed = ARGV[0].to_i
-  end
-else
-  this_day = Date.today
-  seed = this_day.year() * 1000 + this_day.yday()
-  date_of = this_day.strftime("%F")
-end
+seed = regular_seed(ARGV[0])
 
 prng = Random.new(seed)
 sing_day = should_i_sing(prng)
 
 #puts '-----------------'
 print "#{practice_hash["title"]}"
-if date_of
-  print " for the date of #{date_of}"
-end
+#if date_of
+#  print " for the date of #{date_of}"
+#end
 puts " based on seed #{seed}"
 puts "1..8 in random order - #{[1,2,3,4,5,6,7,8].shuffle(random: prng)}"
 puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
