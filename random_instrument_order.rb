@@ -11,22 +11,30 @@ prng = Random.new(seed)
 
 instruments = ['  :45 - voice']
 
-if prng.rand() < 0.5
+selection = prng.rand()
+if selection < 0.5
   instruments.push('  :30 - bass')
-else
+elsif selection < 0.75
   instruments.push('  :30 - guitar')
+else
+  instruments.push('  :30 - synth')
 end
 
 if prng.rand() < 0.5
-  instruments.push('  :30 - piano - xscription and paperstuff')
+  instruments.push('  :30 - piano - xscription (Freddie F) and paperstuff')
 else
   instruments.push('  :30 - piano - repertoire')
 end
 
 instruments = instruments.shuffle(random: prng)
 
+drums_technique_exerice_flows = ['meditative in order',
+                                 'jump around to favorites',
+                                 'crescendo/decrescendo']
+drums_text = '  :45 - drums - ' + drums_technique_exerice_flows.sample(random: prng)
 drums_placement = prng.rand(instruments.size - 1) + 1
-instruments.insert(drums_placement, '  :45 - drums')
+
+instruments.insert(drums_placement, drums_text)
 
 # piano skills anywhere
 piano_skills_placement = prng.rand(instruments.size)

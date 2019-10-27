@@ -90,12 +90,9 @@
   "n_goals" : 2,
   "goal_time" : 30,
   "focus_goals" : [
-             {"name" : "Blue Bossa",
-                "primary_technique" : "Practice chords, walk bass, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing.",
-                "extra_techniques" : ["Practice looseness."]},
              {"name" : "Summertime in Dm",
-                "primary_technique" : "Practice chords, walk bass, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing.",
-                "extra_techniques" : ["Repeat trouble spots at 55 bpm. Practice guide tones!"]},
+                "primary_technique" : "Practice chords, walk bass (1-5-1) w/chords, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing (2-5-1 ARPS).",
+                "extra_techniques" : ["Work on incorporating licks. Work on counting through and knowing where you are."]},
              {"name" : "Solid Dead Eye",
                 "primary_technique" : "Practice it to record it. RECORD AND LISTEN. Practice soloing RH chord by chord with simplified LH.",
                 "extra_techniques" : ["Practice loosness."]},
@@ -104,6 +101,9 @@
                 "extra_techniques" : ["Remember to slow down and repeat trouble spots."]}
               ],
   "goals" : [
+             {"name" : "Blue Bossa",
+                "primary_technique" : "Practice chords, bass, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing.",
+                "extra_techniques" : ["Practice looseness."]},
              {"name" : "Oleo",
                 "primary_technique" : "Practice chords, walk bass, melody, and soloing (SING) while playing choruses now. Play 1 chord arp.",
                 "extra_techniques" : ["SING Bb major pentatonic solo. Get the B♮ in the right place (not over C- or Dø)."]},
