@@ -15,7 +15,8 @@
               "played over 7 - W W H W W H W",
               "played over ∆7 - W W W H W W H",
               "played over 7#11 - W W W H W H W",
-              "played over ø7 - H W W H W W W"
+              "played over ø7 - H W W H W W W",
+              "played over ø7#9 - H W H W W W W"
               ],
   "scales_revealed" : ["played over ∆ or 6 or ii-V7-I - W W H W W W H - major",
               "played over m (option 1) - W H W W H W W - natural minor, aeolian: 6 of ∆",
@@ -26,8 +27,9 @@
               "played over m (option 2) - W H W W W H W - dorian: 2 of ∆",
               "played over 7 - W W H W W H W - mixolydian: 5 of ∆",
               "played over ∆7 - W W W H W W H - lydian: 4 of ∆",
-              "played over 7#11 - W W W H W H W - lydian b7: 4 of ∆ w/mod",
-              "played over ø7 - H W W H W W W - locrian: 7 of ∆"
+              "played over 7#11 - W W W H W H W - lydian b7: 4 of ∆ w/b7",
+              "played over ø7 - H W W H W W W - locrian: 7 of ∆",
+              "played over ø7#9 - H W H W W W W - altered/altered dominant/super-locrian: 7 of ∆ w/b4"
               ],
   "scales_rest" : ["whole tone - 1.0  1.0  1.0  1.0  1.0  1.0",
               "chromatic - sing while playing root only"
@@ -92,7 +94,10 @@
   "focus_goals" : [
              {"name" : "Summertime in Dm",
                 "primary_technique" : "Practice chords, walk bass (1-5-1) w/chords, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing (2-5-1 ARPS).",
-                "extra_techniques" : ["Work on incorporating licks. Work on counting through and knowing where you are."]},
+                "extra_techniques" : ["Work on incorporating licks (multiple fingerings, mutations, in and out). Work on counting through and knowing where you are."]},
+             {"name" : "Footprints",
+                "primary_technique" : "Practice chords, walk bass (1-5-1) w/chords, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing (2-5-1 ARPS).",
+                "extra_techniques" : ["Work on counting through and knowing where you are."]},
              {"name" : "Solid Dead Eye",
                 "primary_technique" : "Practice it to record it. RECORD AND LISTEN. Practice soloing RH chord by chord with simplified LH.",
                 "extra_techniques" : ["Practice loosness."]},
@@ -163,6 +168,7 @@
   "activities" : [
     "progression rhythm practice",
     "real book practice",
+    "scat and play -- play bass note of chord changes in LH and point-sing-play scatting with RH",
     "arpeggios"
     ],
   "activities_rest" : [

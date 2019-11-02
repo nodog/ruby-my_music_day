@@ -1,11 +1,9 @@
 
-             MON     TUE     WED     THU     FRI     SAT     SUN
+                MON      TUE      WED      THU      FRI      SAT      SUN
 
-morning      piano - warmups ***     ***     ***     ***     ***
-             voice   voice   p-rep   voice   voice   p-rep   voice(rep?)
-
-instr pract  drums   ***     ***     ***     ---
-             synth   bass    bass    guitar  bass
-           p-newsong ***     ---     ***     ***
-           p-xscript skills  xscript skills  xscript
+morning         pwarmups pwarmups pwarmups pwarmups pwarmups pwarmups pwarmups
+                voice    voice    p-rep    voice    voice    p-rep    voice(rep?)
+instr pract     pnewsong newsongs ---      newsongs newsongs
+                pxscript skills   xscript  skills   xscript
+                synth    bass     bass     guitar   bass
 
