@@ -77,16 +77,16 @@ puts ", #{practice_hash["arp_start"].sample(random: prng)} start"
 puts "  a scale - #{practice_hash["scales"].sample(random: prng)}"
 generate_scales_practice(practice_hash, prng, sing_day)
 puts ''
-puts "  warmup scales - major, harmonic minor, melodic minor, natural minor in today\'s root."
-puts '  warmup chords - I IV I V I (triads in major), i iv i V i (triads in harmonic minor)'
+puts "  piano warmup scales - major, harmonic minor, melodic minor, natural minor in today\'s root."
+puts '  piano warmup chords - I IV I V I (triads in major), i iv i V i (triads in harmonic minor)'
 puts '  warmup voice - buzzing octave sirens in my range.'
 puts '  warmup voice - point-sing-play major scales in my range.'
 puts '  warmup voice - point-sing-play random notes above in my range.'
-puts '  point-sing-play; root & sing - up & down major w/alternating root w & w/o piano.'
-puts '  sing & play; root & sing - up & down chromatic w/piano.'
-puts '  tonicize (I-IV-I-V-I triads); root & sing; root & auralize - sight sing exercises.'
-puts '  vocal improv - point-scat-play LH bass note, RH point-sing-play piano.'
-puts '  play a backing track, vocal improv + piano doubling'
+puts '  voice exercise - point-sing-play up & down major w/alternating root w & w/o piano.'
+puts '  voice exercise - sing-play - up & down chromatic w/piano.'
+puts '  voice exercise - tonicize (I-IV-I-V-I triads) - sight sing exercises.'
+puts '  voice exercise - vocal improv - point-scat-play LH bass note, RH point-sing-play piano.'
+puts '  voice exercise - play a backing track, vocal improv + piano doubling'
 #puts "  connection style - #{practice_hash["connection_styles"][2]} with clean firm touch"
 
 # GOALS
