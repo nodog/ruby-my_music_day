@@ -63,6 +63,7 @@ print "#{practice_hash["title"]}"
 #end
 puts " based on seed #{seed}"
 puts "1..8 in random order - #{[1,2,3,4,5,6,7,8].shuffle(random: prng)}"
+puts 'Practice chords, walk bass (1-5-1) w/chords, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing (2-5-1 ARPS).'
 puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
 #puts "\n-----------------"
 puts "\n"
