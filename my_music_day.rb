@@ -78,7 +78,7 @@ puts ", #{practice_hash["arp_start"].sample(random: prng)} start"
 puts "  a scale - #{practice_hash["scales"].sample(random: prng)}"
 generate_scales_practice(practice_hash, prng, sing_day)
 puts ''
-puts "  piano warmup scales - major, harmonic minor, melodic minor, natural minor in today\'s root."
+puts "  piano warmup scales - major, dorian, harmonic minor, melodic minor, natural minor in today\'s root."
 puts '  piano warmup chords - I IV I V I (triads in major), i iv i V i (triads in harmonic minor)'
 puts '  warmup voice - buzzing octave sirens in my range.'
 puts '  warmup voice - point-sing-play major scales in my range.'
@@ -130,7 +130,7 @@ end
 
 def generate_arpeggios_practice(practice_hash, prng, sing_day)
   print "  chord order"
-  puts " -  #{practice_hash["chords"].shuffle(random:prng).join('  ')}"
+  puts " -  #{practice_hash["chord_types"].shuffle(random:prng).join('  ')}"
   print "  arpeggio style" + sing_day
   puts " - #{practice_hash["arp_styles"].sample(random: prng)}"
   print "  chord style"

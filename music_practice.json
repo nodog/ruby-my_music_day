@@ -5,6 +5,7 @@
   "draft_date" : "2018-10-19",
   "all_notes" : [ "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", "A", "A#/Bb", "B"],
   "keys" : [ "C", "G", "D", "A", "E", "B", "F#", "C#", "Ab", "Eb", "Bb", "F" ],
+  "chords" : [ "C", "G", "D", "A", "E", "B", "F#", "C#", "Ab", "Eb", "Bb", "F" ],
   "scales" : ["played over ∆ or 6 or ii-V7-I - W W H W W W H",
               "played over m (option 1) - W H W W H W W",
               "played over iiø-V7-i - W H W W H m3 H",
@@ -34,7 +35,7 @@
   "scales_rest" : ["whole tone - 1.0  1.0  1.0  1.0  1.0  1.0",
               "chromatic - sing while playing root only"
               ],
-  "chords" : ["6", "-6", "-7", "ø7", "7", "°7", "◬7"],
+  "chord_types" : ["6", "-6", "-7", "ø7", "7", "°7", "◬7"],
   "arp_styles" : [
                   "BH all notes as chords",
                   "BH all notes as chords including/excluding tensions",
@@ -97,10 +98,11 @@
                 "extra_techniques" : ["Play meas 11-14 increasingly fast as LH chords, then improv afterwards."]},
              {"name" : "Footprints",
                 "primary_technique" : "Practice chords, walk bass (1-5-1) w/chords, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing (2-5-1 ARPS).",
-                "extra_techniques" : ["Work on counting through and knowing where you are, and soloing while playing chords."]},
+                "extra_techniques" : ["Work on counting through and knowing where you are, and soloing while playing chords."],
+                                     ["Try planing the So What voicings in C- and F-."]},
              {"name" : "Solid Dead Eye",
-                "primary_technique" : "Practice it to record it. RECORD AND LISTEN. Practice soloing RH chord by chord with simplified LH.",
-                "extra_techniques" : ["Practice loosness."]},
+                "primary_technique" : "Practice it to record it. RECORD AND LISTEN. Practice quarter note soloing RH chord by chord with simplified LH.",
+                "extra_techniques" : ["Practice looseness."]},
              {"name" : "Play Bach's Minuet",
                 "primary_technique" : "Mark up the notes that give you trouble. Measure by measure hands together.",
                 "extra_techniques" : ["Remember to slow down and repeat trouble spots."]}
@@ -169,6 +171,7 @@
     "progression rhythm practice",
     "real book practice",
     "scat and play -- play bass note of chord changes in LH and point-sing-play scatting with RH",
+    "try rushing/dragging exercises",
     "arpeggios"
     ],
   "activities_rest" : [
