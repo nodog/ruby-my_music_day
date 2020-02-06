@@ -62,8 +62,8 @@ print "#{practice_hash["title"]}"
 #  print " for the date of #{date_of}"
 #end
 puts " based on seed #{seed}"
-puts "1..8 in random order - #{[1,2,3,4,5,6,7,8].shuffle(random: prng)}"
 puts 'Practice chords, walk bass (1-5-1) w/chords, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing (2-5-1 ARPS).'
+puts "1..8 in random order - #{[1,2,3,4,5,6,7,8].shuffle(random: prng)}"
 puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
 #puts "\n-----------------"
 puts "\n"
@@ -90,6 +90,33 @@ puts '  voice exercise - vocal improv - point-scat-play LH bass note, RH point-s
 puts '  voice exercise - play a backing track, vocal improv + piano doubling'
 #puts "  connection style - #{practice_hash["connection_styles"][2]} with clean firm touch"
 
+
+def generate_arpeggios_practice(practice_hash, prng, sing_day)
+  print "  chord order"
+  puts " -  #{practice_hash["chord_types"].shuffle(random:prng).join('  ')}"
+  print "  arpeggio style" + sing_day
+  puts " - #{practice_hash["arp_styles"].sample(random: prng)}"
+  print "  chord style"
+  puts " - #{practice_hash["chord_styles"].sample(random: prng)}"
+end
+
+n_exercises = practice_hash["n_exercises"]
+exercise_time = practice_hash["exercise_time"]/n_exercises
+print "\n--- session 1 - #{exercise_time} min"
+puts " - arpeggio practice"
+generate_arpeggios_practice(practice_hash, prng, sing_day)
+
+def generate_progression_rhythm_practice(practice_hash, prng)
+  puts "  chord style: #{practice_hash["chord_styles"].sample(random: prng)}"
+  puts "  chord progression: #{practice_hash["chord_progressions"].sample(random: prng)}"
+  puts "  comping rhythm 1 -   |:  #{generate_comp_rhythm(prng)} :|"
+  puts "  comping rhythm 2 -   |:  #{generate_comp_rhythm(prng)} :|"
+end
+
+print "\n--- session 2 - #{exercise_time} min"
+puts " - chord progression practice"
+generate_progression_rhythm_practice(practice_hash, prng)
+
 # GOALS
 goals = practice_hash["goals"].shuffle(random:prng)
 # if no focus_goals, do nothing, if 1, put it in first 2, otherwise, focus_goals take over
@@ -106,7 +133,7 @@ for i_goal in 0..(n_goals - 1)
   #puts "\n-----------------"
   puts "\n"
   goal = goals[i_goal]
-  puts "--- session #{i_goal + 1} - #{practice_hash['goal_time']/n_goals} min --- #{goal['name']}"
+  puts "--- session #{i_goal + 3} - #{practice_hash['goal_time']/n_goals} min --- #{goal['name']}"
   puts "  #{goal['primary_technique']}"
   # add back??  "over #{practice_hash["backing_sources"].sample(random: prng)}"
   shuffled_solo_techniques = practice_hash['solo_techniques'].shuffle(random: prng)
@@ -120,38 +147,14 @@ for i_goal in 0..(n_goals - 1)
 end
 
 # EXERCISES
-def generate_progression_rhythm_practice(practice_hash, prng)
-  puts "  chord style: #{practice_hash["chord_styles"].sample(random: prng)}"
-  puts "  chord progression: #{practice_hash["chord_progressions"].sample(random: prng)}"
-  puts "  comping rhythm 1 -   |:  #{generate_comp_rhythm(prng)} :|"
-  puts "  comping rhythm 2 -   |:  #{generate_comp_rhythm(prng)} :|"
-end
-
-
-def generate_arpeggios_practice(practice_hash, prng, sing_day)
-  print "  chord order"
-  puts " -  #{practice_hash["chord_types"].shuffle(random:prng).join('  ')}"
-  print "  arpeggio style" + sing_day
-  puts " - #{practice_hash["arp_styles"].sample(random: prng)}"
-  print "  chord style"
-  puts " - #{practice_hash["chord_styles"].sample(random: prng)}"
-end
-
 n_exercises = practice_hash["n_exercises"]
 exercise_time = practice_hash["exercise_time"]/n_exercises
 shuffled_activities = practice_hash["activities"].shuffle(random: prng)
 for i_session in 1..n_exercises do
-  print "\n--- session #{i_session + n_goals} - #{exercise_time} min"
+  print "\n--- session #{i_session + n_goals + 2} - #{exercise_time} min"
 #   puts "instrument = #{practice_hash["instruments"].sample(random: prng)}"
   activity = shuffled_activities[i_session - 1]
   puts " - #{activity}"
-
-  case activity
-  when "progression rhythm practice"
-    generate_progression_rhythm_practice(practice_hash, prng)
-  when "arpeggios"
-    generate_arpeggios_practice(practice_hash, prng, sing_day)
-  end
 
 #   goal_numbers = activity["goals"]
 #   puts "  goals to keep in mind:"
