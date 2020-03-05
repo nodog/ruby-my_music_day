@@ -11,6 +11,7 @@ repertoire = ['Take the A Train',
               'Blue Bossa',
               'Footprints',
               'Autumn Leaves',
+              'Caravan',
               'Chameleon']
 
 repertoire = repertoire.shuffle
