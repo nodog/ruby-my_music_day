@@ -7,7 +7,7 @@ def regular_seed(cli_argument)
       seed = rand(BIG_INTEGER)
     elsif cli_argument == "tomorrow"
       tomorrow = Date.today + 1
-      puts "seed based on tomorrow's date = #{tomorrow}"
+      print "tomorrow #{tomorrow} -- "
       seed = tomorrow.year() * 1000 + tomorrow.yday()
       date_of = tomorrow.strftime("%F")
     else
@@ -15,7 +15,7 @@ def regular_seed(cli_argument)
     end
   else
     this_day = Date.today
-    puts "seed based on today's date = #{this_day}"
+    print "today #{this_day} -- "
     seed = this_day.year() * 1000 + this_day.yday()
   end
 
