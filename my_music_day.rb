@@ -68,7 +68,6 @@ puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0.
 #puts "\n-----------------"
 puts "\n"
 #puts sing_day
-print "  Dm harmonic and ..."
 print "  key - #{practice_hash['all_notes'].sample(random: prng)}"
 print "   metronome - #{generate_tempo(prng)}"
 puts "   style - #{practice_hash["metronome_styles"].sample(random: prng)}"
@@ -78,6 +77,7 @@ puts ", #{practice_hash["arp_start"].sample(random: prng)} start"
 puts "  a scale - #{practice_hash["scales"].sample(random: prng)}"
 generate_scales_practice(practice_hash, prng, sing_day)
 puts ''
+puts '  scale chords in random order. Say the chord names out loud.'
 puts "  piano warmup scales - major, dorian, harmonic minor, melodic minor, natural minor in today\'s root."
 puts '  piano warmup chords - I IV I V I (triads in major), i iv i V i (triads in harmonic minor)'
 puts '  warmup voice - buzzing octave sirens in my range.'
