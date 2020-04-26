@@ -81,6 +81,7 @@ puts '  scale chords in random order. Say the chord names out loud.'
 puts "  piano warmup scales - major, dorian, harmonic minor, melodic minor, natural minor in today\'s root."
 puts '  piano warmup chords - I IV I V I (triads in major), i iv i V i (triads in harmonic minor)'
 puts '  warmup voice - buzzing octave sirens in my range.'
+puts '  If structure is giving trouble: 5X chorus chords only, visualize music, improvise structurally.'
 # puts '  warmup voice - point-sing-play major scales in my range.'
 # puts '  warmup voice - point-sing-play random notes above in my range.'
 # puts '  voice exercise - point-sing-play up & down major w/alternating root w & w/o piano.'
