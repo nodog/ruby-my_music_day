@@ -63,8 +63,8 @@ print "#{practice_hash["title"]}"
 #end
 puts " based on seed #{seed}"
 puts 'Practice chords, walk bass (1-5-1) w/chords, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing (2-5-1 ARPS).'
-puts "1..8 in random order - #{[1,2,3,4,5,6,7,8].shuffle(random: prng)}"
 puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
+puts "1..8 in random order - #{[1,2,3,4,5,6,7,8].shuffle(random: prng)}"
 #puts "\n-----------------"
 puts "\n"
 #puts sing_day
@@ -77,11 +77,11 @@ puts ", #{practice_hash["arp_start"].sample(random: prng)} start"
 puts "  a scale - #{practice_hash["scales"].sample(random: prng)}"
 generate_scales_practice(practice_hash, prng, sing_day)
 puts ''
-puts '  scale chords in random order. Say the chord names out loud.'
-puts "  piano warmup scales - major, dorian, harmonic minor, melodic minor, natural minor in today\'s root."
-puts '  piano warmup chords - I IV I V I (triads in major), i iv i V i (triads in harmonic minor)'
-puts '  warmup voice - buzzing octave sirens in my range.'
-puts '  If structure is giving trouble: 5X chorus chords only, visualize music, improvise structurally.'
+puts '  weightlifting, 5 min 1 scale, random chords'
+puts "  scales - major, dorian, harmonic minor, mixolydian, natural minor, minor blues"
+puts '  I IV I V I (triads in major), i iv i V i (triads in harmonic minor)'
+#puts '  warmup voice - buzzing octave sirens in my range.'
+#puts '  If structure is giving trouble: 5X chorus chords only, visualize music, improvise structurally.'
 # puts '  warmup voice - point-sing-play major scales in my range.'
 # puts '  warmup voice - point-sing-play random notes above in my range.'
 # puts '  voice exercise - point-sing-play up & down major w/alternating root w & w/o piano.'
@@ -101,23 +101,6 @@ def generate_arpeggios_practice(practice_hash, prng, sing_day)
   puts " - #{practice_hash["chord_styles"].sample(random: prng)}"
 end
 
-n_exercises = practice_hash["n_exercises"]
-exercise_time = practice_hash["exercise_time"]/n_exercises
-print "\n--- session 1 - #{exercise_time} min"
-puts " - arpeggio practice"
-generate_arpeggios_practice(practice_hash, prng, sing_day)
-
-def generate_progression_rhythm_practice(practice_hash, prng)
-  puts "  chord style: #{practice_hash["chord_styles"].sample(random: prng)}"
-  puts "  chord progression: #{practice_hash["chord_progressions"].sample(random: prng)}"
-  puts "  comping rhythm 1 -   |:  #{generate_comp_rhythm(prng)} :|"
-  puts "  comping rhythm 2 -   |:  #{generate_comp_rhythm(prng)} :|"
-end
-
-print "\n--- session 2 - #{exercise_time} min"
-puts " - chord progression practice"
-generate_progression_rhythm_practice(practice_hash, prng)
-
 # GOALS
 goals = practice_hash["goals"].shuffle(random:prng)
 # if no focus_goals, do nothing, if 1, put it in first 2, otherwise, focus_goals take over
@@ -134,7 +117,7 @@ for i_goal in 0..(n_goals - 1)
   #puts "\n-----------------"
   puts "\n"
   goal = goals[i_goal]
-  puts "--- session #{i_goal + 3} - #{practice_hash['goal_time']/n_goals} min --- #{goal['name']}"
+  puts "--- session #{i_goal + 1} - #{practice_hash['goal_time']/n_goals} min --- #{goal['name']}"
   puts "  #{goal['primary_technique']}"
   # add back??  "over #{practice_hash["backing_sources"].sample(random: prng)}"
   shuffled_solo_techniques = practice_hash['solo_techniques'].shuffle(random: prng)
@@ -146,6 +129,23 @@ for i_goal in 0..(n_goals - 1)
     puts '  RECORD AND LISTEN TO THIS!'
   end
 end
+
+n_exercises = practice_hash["n_exercises"]
+exercise_time = practice_hash["exercise_time"]/n_exercises
+print "\n--- session 3 - #{exercise_time} min"
+puts " - arpeggio practice"
+generate_arpeggios_practice(practice_hash, prng, sing_day)
+
+def generate_progression_rhythm_practice(practice_hash, prng)
+  puts "  chord style: #{practice_hash["chord_styles"].sample(random: prng)}"
+  puts "  chord progression: #{practice_hash["chord_progressions"].sample(random: prng)}"
+  puts "  comping rhythm 1 -   |:  #{generate_comp_rhythm(prng)} :|"
+  puts "  comping rhythm 2 -   |:  #{generate_comp_rhythm(prng)} :|"
+end
+
+print "\n--- session 4 - #{exercise_time} min"
+puts " - chord progression practice"
+generate_progression_rhythm_practice(practice_hash, prng)
 
 # EXERCISES
 n_exercises = practice_hash["n_exercises"]
