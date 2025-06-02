@@ -27,6 +27,12 @@ def generate_tempo(prng)
   prng.rand(80) + 80
 end
 
+def generate_instrument(practice_hash, prng)
+  #"voice", "keys", "drums", "fretted", "learning"
+  instrument_type = practice_hash['instrument_types'].shuffle(random:prng)[0]
+  return practice_hash["#{instrument_type}_instruments"].shuffle(random:prng)[0]
+end
+
 def should_i_sing(prng)
   if (prng.rand(1.0) > 0.5)
     return " - SING"
@@ -62,9 +68,11 @@ print "#{practice_hash["title"]}"
 #  print " for the date of #{date_of}"
 #end
 puts " based on seed #{seed}"
-puts 'Practice chords, walk bass (1-5-1) w/chords, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing (2-5-1 ARPS).'
-puts "4 notes for improv - #{practice_hash["all_notes"].shuffle(random: prng)[0..3].join('  ')}"
+#puts 'Practice chords, walk bass (1-5-1) w/chords, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing (2-5-1 ARPS).'
+puts "all random notes for improv - #{practice_hash["all_notes"].shuffle(random: prng).join('  ')}"
 puts "1..8 in random order - #{[1,2,3,4,5,6,7,8].shuffle(random: prng)}"
+puts "instrument - #{generate_instrument(practice_hash, prng)}"
+
 #puts "\n-----------------"
 puts "\n"
 #puts sing_day
