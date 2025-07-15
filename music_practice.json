@@ -40,7 +40,7 @@
     "Yamaha P1 acoustic piano",
     "nord electro 6 keyboard",
     "nord electro 6 keyboard",
-    "nord electro 6 keyboard",
+    "nord electro 6 keyboard - organ",
     "roland FA-08 keyboard",
     "Casio CT-S1 keyboard",
     "Roland RP102 keyboard",
@@ -63,7 +63,13 @@
     "Guild DV-6 guitar",
     "ukulele"
   ],
-  "learning_instruments": ["trombone", "trumpet", "didgeridoo", "violin"],
+  "learning_instruments": [
+    "trombone",
+    "trumpet",
+    "didgeridoo",
+    "violin",
+    "recorder"
+  ],
   "keys": ["C", "G", "D", "A", "E", "B", "F#", "C#", "Ab", "Eb", "Bb", "F"],
   "chords": ["C", "G", "D", "A", "E", "B", "F#", "C#", "Ab", "Eb", "Bb", "F"],
   "scales": [
@@ -232,6 +238,22 @@
       ]
     },
     {
+      "name": "Blue Skies",
+      "primary_technique": "Practice chords, bass, melody, melody w/chords, soloing, soloing w/chords",
+      "extra_techniques": [
+        "triad splits 1-5 + 3-5 (no doubled 3rds unless melody note)",
+        "easy - Bm blues and D∆ blues scales soloing, bridge D∆ & G-mel",
+        "practice coming in on and-of-4 in measures 2, 4, 6",
+        "practice the bridge with scales starting not on 1 (time or degree)",
+        "LH close voicing + RH octave double of descending note"
+      ]
+    },
+    {
+      "name": "Two Foot Mew",
+      "primary_technique": "Practice chords, bass, singing, soloing",
+      "extra_techniques": ["Keep practicing the whole thing slowly"]
+    },
+    {
       "name": "Freddie Freeloader",
       "primary_technique": "1 head - 1 open comp - 3 sing(8vb?)&solo - 1 head. All 4 licks into solos (SING 'em). Play 1 chord arp.",
       "extra_techniques": [
@@ -320,18 +342,6 @@
       "extra_techniques": [
         "improv: practice using licks",
         "improv: put RH over chords and comping under RH solo"
-      ]
-    },
-    {
-      "name": "Blue Skies",
-      "primary_technique": "Practice chords, bass, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing.",
-      "extra_techniques": [
-        "triad splits 1-5 + 3-5 (no doubled 3rds unless melody note)",
-        "easy - Bm blues and D∆ blues scales soloing, bridge D∆ & G-mel",
-        "practice coming in on and-of-4 in measures 2, 4, 6",
-        "practice the bridge with scales starting not on 1 (time or degree)",
-        "LH close voicing + RH octave double of descending note",
-        "Look at the last measure of the B section on the printed sheet music for change."
       ]
     },
     {
