@@ -225,6 +225,15 @@
   "goal_time": 30,
   "focus_goals": [
     {
+      "name": "This Will be Our Year",
+      "primary_technique": "practice chords, bass, singing.",
+      "extra_techniques": ["get all the chords in your fingers again"],
+      "extra_techniques_overflow": [
+        "Practice playing the head and solo over irealpro chords w/whole note or mimicked rhythm.",
+        "Isolate 2 bars at a time and improvise over that."
+      ]
+    },
+    {
       "name": "Autumn Leaves",
       "primary_technique": "Practice chords, bass, melody, melody w/chords, soloing (Bb∆, G- harm, G dor), soloing, solo w/chords, and soloing.",
       "extra_techniques": [
