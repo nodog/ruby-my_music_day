@@ -263,6 +263,15 @@
       "extra_techniques": ["Keep practicing the whole thing slowly"]
     },
     {
+      "name": "Blue Bossa",
+      "primary_technique": "Practice chords, bass, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing.",
+      "extra_techniques": [
+        "Solo - Try using chord tones and slow arps.",
+        "Practice especially measures 10-11 w/Gb leading into Db∆. Avoid double-hit.",
+        "On Ab7 avoid Db, on Dø avoid G, and on G7 avoid C - genroally avoid tonic on V7 chord."
+      ]
+    },
+    {
       "name": "Freddie Freeloader",
       "primary_technique": "1 head - 1 open comp - 3 sing(8vb?)&solo - 1 head. All 4 licks into solos (SING 'em). Play 1 chord arp.",
       "extra_techniques": [
@@ -297,15 +306,6 @@
         "LH - more sustained chords.",
         "Play 6 notes up scale in turnaround. Play chord tones in turnaround.",
         "Try planing the \"So What\" voicings in C- and F-."
-      ]
-    },
-    {
-      "name": "Blue Bossa",
-      "primary_technique": "Practice chords, bass, melody, melody w/chords, soloing, soloing, solo w/chords, and soloing.",
-      "extra_techniques": [
-        "Solo - Try using chord tones and slow arps.",
-        "Practice especially measures 10-11 w/Gb leading into Db∆. Avoid double-hit.",
-        "On Ab7 avoid Db, on Dø avoid G, and on G7 avoid C - genroally avoid tonic on V7 chord."
       ]
     },
     {
